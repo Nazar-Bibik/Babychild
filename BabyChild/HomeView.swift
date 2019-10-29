@@ -70,7 +70,7 @@ struct HomeView: View {
             Header()
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 32) {
-                    RedirectButton(name: "Sleep", info: "Information", background: Color.orange)
+                    RedirectButton(name: "Go", info: "Information", background: Color.orange)
                     RedirectButton(name: "Feed", info: "Info", background: Color.green)
                     RedirectButton(name: "Change", background: Color.yellow)
                     RedirectButton(name: "Entertainment", background: Color.purple)
