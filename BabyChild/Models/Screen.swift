@@ -17,7 +17,9 @@ struct Screen {
         return UIScreen.main.bounds.height
     }
     static var statusBarHeight: CGFloat {
-        return UIApplication.shared.statusBarFrame.size.height
-        
+        return UIStatusBarManager.accessibilityFrame().height
+    }
+    static var statusBarWidth: CGFloat {
+        return UIStatusBarManager.accessibilityFrame().width
     }
 }
