@@ -11,27 +11,22 @@ import SwiftUI
 
 
 let wizardMenu: [MenuItems] = [
-    MenuItems(i: 1, n: "Health", p: 2),
-    MenuItems(i: 2, n: "And", p: 2),
-    MenuItems(i: 3, n: "Other", p: 1),
-    MenuItems(i: 4, n: "Very", p: 1),
-    MenuItems(i: 5, n: "Important", p: 1),
-    MenuItems(i: 6, n: "Stuff", p: 0),
-    MenuItems(i: 7, n: "yes", p: 0),
-    MenuItems(i: 8, n: "yes", p: 0),
-    MenuItems(i: 9, n: "yes", p: 1),
-    MenuItems(i: 10, n: "yes", p: 1),
-    MenuItems(i: 11, n: "yes", p: 1),
-    MenuItems(i: 12, n: "yes", p: 0),
-    MenuItems(i: 13, n: "yes", p: 2),
-    MenuItems(i: 14, n: "yes", p: 0),
-    MenuItems(i: 15, n: "yes", p: 1),
-    MenuItems(i: 16, n: "yes", p: 2),
+    MenuItems(i: 1, n: "Emergency and remedies", p: 2),
+    MenuItems(i: 2, n: "Baby handle videos", p: 2),
+    MenuItems(i: 3, n: "Medical Records", p: 2),
+    MenuItems(i: 4, n: "Mommy", p: 1),
+    MenuItems(i: 5, n: "Daddy", p: 1),
+    MenuItems(i: 6, n: "Baby's growth", p: 1),
+    MenuItems(i: 7, n: "Milestones", p: 1),
+    MenuItems(i: 8, n: "Vaccination", p: 1),
+    MenuItems(i: 9, n: "Paediatrician", p: 1),
+    MenuItems(i: 10, n: "Advices", p: 0),
+    MenuItems(i: 11, n: "Setting", p: 0),
 ]
 
 let wizardMenuSegue: [MenuItems] = [
-    MenuItems(i: 1, n: "Other", p: 2),
-    MenuItems(i: 2, n: "Test", p: 2),
-    MenuItems(i: 3, n: "Tab", p: 1),
+    MenuItems(i: 1, n: "Allergies", p: 2),
+    MenuItems(i: 2, n: "Cold", p: 2),
+    MenuItems(i: 3, n: "Treating baby in summer", p: 1),
     MenuItems(i: 4, n: "Here", p: 1),
 ]

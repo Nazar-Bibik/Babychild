@@ -17,7 +17,7 @@ struct ContentView: View {
                     Text("Home")
 
             }.tag(1)
-            Wizard(context: wizardMenu)
+            WizardView(context: wizardMenu)
                 .tabItem{
                     Text("Wizard")
             }.tag(2)

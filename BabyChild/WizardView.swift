@@ -1,8 +1,8 @@
 //
-//  Wizard.swift
+//  WizardView.swift
 //  BabyChild
 //
-//  Created by Mow on 26/10/2019.
+//  Created by Mow on 30/10/2019.
 //  Copyright © 2019 Mow. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import SwiftUI
 import Foundation
 import UIKit
 
-struct Wizard: View {
+struct WizardView: View {
     let context: [MenuItems]
     var body: some View {
         NavigationView{
@@ -20,7 +20,7 @@ struct Wizard: View {
                 
             }
             else {
-                NavigationLink(destination: Wizard(context: wizardMenuSegue)) {
+                NavigationLink(destination: ListSegueView(tab: item, context: wizardMenuSegue)) {
                     CellModelCapital(name: item.showName(), priority: item.showColor())
                 }
             }
@@ -32,6 +32,6 @@ struct Wizard: View {
 
 struct Wizard_Previews: PreviewProvider {
     static var previews: some View {
-        Wizard(context: wizardMenu)
+        WizardView(context: wizardMenu)
     }
 }
