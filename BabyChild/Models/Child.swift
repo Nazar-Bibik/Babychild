@@ -8,13 +8,14 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
-class Child: Identifiable{
-    var data: ChildData
-    var Feed: Bool
-    var Sleep: Bool
-    var SleepTime: NSDate?
-    var FeedTime: NSDate?
+class Child: Identifiable, ObservableObject{
+    @Published var data: ChildData
+    @Published var Feed: Bool
+    @Published var Sleep: Bool
+    @Published var SleepTime: NSDate?
+    @Published var FeedTime: NSDate?
     
     init(childData: ChildData){
         data = childData
@@ -24,7 +25,28 @@ class Child: Identifiable{
         FeedTime = nil
     }
     
+    func age() -> Int{
+        let calendar = Calendar.current
+        let birth = calendar.startOfDay(for: data.DOB)
+        let now = calendar.startOfDay(for: Date())
+        
+        let components = calendar.dateComponents([.day], from: birth, to: now)
+        
+        return components.day!
+    }
     
+}
+
+extension Child{
+    func showAgeWeeks() -> String{
+        return String(self.age() / 7)
+    }
     
+    func showAgeDays() -> String{
+        return String(self.age() % 7)
+    }
     
+    func showPicture() -> Image{
+        return data.image
+    }
 }

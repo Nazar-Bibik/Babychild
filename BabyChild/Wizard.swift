@@ -7,15 +7,31 @@
 //
 
 import SwiftUI
+import Foundation
+import UIKit
 
 struct Wizard: View {
+    let context: [MenuItems]
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+        List(context, id: \.id) { item in
+            if (item.id != 1) {
+                CellModelCapital(name: item.showName(), priority: item.showColor())
+                
+            }
+            else {
+                NavigationLink(destination: Wizard(context: wizardMenuSegue)) {
+                    CellModelCapital(name: item.showName(), priority: item.showColor())
+                }
+            }
+        }
+        .navigationBarTitle(Text("All in One"))
+        }
     }
 }
 
 struct Wizard_Previews: PreviewProvider {
     static var previews: some View {
-        Wizard()
+        Wizard(context: wizardMenu)
     }
 }

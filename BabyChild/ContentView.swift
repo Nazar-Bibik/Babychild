@@ -11,15 +11,16 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView() {
-            HomeView(data: childArray[0])
+            HomeView()
+                .environmentObject(childArray[0])
                 .tabItem {
                     Text("Home")
 
             }.tag(1)
-//            Tab2()
-//                .tabItem{
-//                    Text("2")
-//            }.tag(2)
+            Wizard(context: wizardMenu)
+                .tabItem{
+                    Text("Wizard")
+            }.tag(2)
         }
         .edgesIgnoringSafeArea(.top)
     }

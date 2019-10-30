@@ -7,12 +7,14 @@
 //
 
 import SwiftUI
+import UIKit
+import Foundation
 
 struct ChildData: Equatable, Hashable, Codable {
     var id: Int
     var Name: String
     var Surname: String
-    var DOB: String
+    var BirthDate: String
     var Health: Bool
     fileprivate var Picture: String
     var Gender: Gender
@@ -29,6 +31,7 @@ struct ChildData: Equatable, Hashable, Codable {
         case girl = "girl"
         case boy = "boy"
     }
+    
     
 //    init(id: Int, Name: String, Surname: String, DOB: Date, Health: Bool, Picture: String, Bloodtype: String, Gender: String){
 //        self.id = id
@@ -49,6 +52,15 @@ extension ChildData {
         Image(Picture)
     }
 }
+
+extension ChildData {
+    var DOB: Date {
+        let dateFormater = DateFormatter()
+        dateFormater.dateFormat = "yyyy-MM-dd HH:mm"
+        return dateFormater.date(from: BirthDate)!
+    }
+}
+
 
 
 

@@ -3,7 +3,7 @@
         "id": 5,
         "Name": "Oishy",
         "Surname": "Dhamad",
-        "DOB": "2019-20-01",
+        "BirthDate": "2019-02-01 11:12",
         "Health": false,
         "Picture": "test",
         "Gender": "girl",

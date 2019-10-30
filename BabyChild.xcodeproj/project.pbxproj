@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9557AFDC2369288C002055F0 /* CellModelCapital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9557AFDB2369288B002055F0 /* CellModelCapital.swift */; };
+		95756432236930180084253B /* testDataWizardCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95756431236930180084253B /* testDataWizardCells.swift */; };
+		95756436236936390084253B /* MenuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95756435236936390084253B /* MenuItems.swift */; };
 		95984EC523671A0F00AED0AE /* ChildTestLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95984EC423671A0F00AED0AE /* ChildTestLoad.swift */; };
 		95984EC823671C4C00AED0AE /* testDataChild.json in Resources */ = {isa = PBXBuildFile; fileRef = 95984EC723671C4C00AED0AE /* testDataChild.json */; };
 		95984ECA2367225100AED0AE /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95984EC92367225100AED0AE /* Screen.swift */; };
@@ -43,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9557AFDB2369288B002055F0 /* CellModelCapital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModelCapital.swift; sourceTree = "<group>"; };
+		95756431236930180084253B /* testDataWizardCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testDataWizardCells.swift; sourceTree = "<group>"; };
+		95756435236936390084253B /* MenuItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItems.swift; sourceTree = "<group>"; };
 		95984EC423671A0F00AED0AE /* ChildTestLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildTestLoad.swift; sourceTree = "<group>"; };
 		95984EC723671C4C00AED0AE /* testDataChild.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testDataChild.json; sourceTree = "<group>"; };
 		95984EC92367225100AED0AE /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
@@ -96,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				95984EC723671C4C00AED0AE /* testDataChild.json */,
+				95756431236930180084253B /* testDataWizardCells.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -173,6 +180,7 @@
 				95B4BA052365F7D100D0B6D1 /* Child.swift */,
 				95984EC423671A0F00AED0AE /* ChildTestLoad.swift */,
 				95984EC92367225100AED0AE /* Screen.swift */,
+				95756435236936390084253B /* MenuItems.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -180,6 +188,7 @@
 		95B4BA072366071800D0B6D1 /* HelpViewes */ = {
 			isa = PBXGroup;
 			children = (
+				9557AFDB2369288B002055F0 /* CellModelCapital.swift */,
 			);
 			path = HelpViewes;
 			sourceTree = "<group>";
@@ -317,10 +326,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				95B3F4FA235DEAAA00DA429C /* BabyChild.xcdatamodeld in Sources */,
+				9557AFDC2369288C002055F0 /* CellModelCapital.swift in Sources */,
 				95B3F4F5235DEAAA00DA429C /* AppDelegate.swift in Sources */,
 				95B4BA062365F7D100D0B6D1 /* Child.swift in Sources */,
 				95B3F4FC235DEAAA00DA429C /* ContentView.swift in Sources */,
 				95F48E6823624DEA00FB2EB6 /* HomeView.swift in Sources */,
+				95756436236936390084253B /* MenuItems.swift in Sources */,
+				95756432236930180084253B /* testDataWizardCells.swift in Sources */,
 				95984ECA2367225100AED0AE /* Screen.swift in Sources */,
 				95B4BA012364E27100D0B6D1 /* Wizard.swift in Sources */,
 				95984EC523671A0F00AED0AE /* ChildTestLoad.swift in Sources */,
