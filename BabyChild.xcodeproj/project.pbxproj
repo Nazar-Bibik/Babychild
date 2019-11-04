@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		951894EC2369DCA700881270 /* SleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951894EB2369DCA700881270 /* SleepView.swift */; };
 		9557AFDC2369288C002055F0 /* CellModelCapital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9557AFDB2369288B002055F0 /* CellModelCapital.swift */; };
 		9563E5A52369B8DF00D2BFC9 /* WizardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9563E5A42369B8DF00D2BFC9 /* WizardView.swift */; };
 		9563E5A72369B99E00D2BFC9 /* ListSegueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9563E5A62369B99E00D2BFC9 /* ListSegueView.swift */; };
@@ -15,6 +16,9 @@
 		95984EC523671A0F00AED0AE /* ChildTestLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95984EC423671A0F00AED0AE /* ChildTestLoad.swift */; };
 		95984EC823671C4C00AED0AE /* testDataChild.json in Resources */ = {isa = PBXBuildFile; fileRef = 95984EC723671C4C00AED0AE /* testDataChild.json */; };
 		95984ECA2367225100AED0AE /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95984EC92367225100AED0AE /* Screen.swift */; };
+		95994B5F236E0E6800B68151 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95994B5E236E0E6800B68151 /* SwiftUIView.swift */; };
+		95994B61236E214000B68151 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95994B60236E214000B68151 /* HeaderView.swift */; };
+		95994B65236E21D600B68151 /* RedirectButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95994B64236E21D600B68151 /* RedirectButtonView.swift */; };
 		95AFC7E42369BB8F00B6C0D9 /* HappyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AFC7E32369BB8F00B6C0D9 /* HappyView.swift */; };
 		95B3F4F5235DEAAA00DA429C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3F4F4235DEAAA00DA429C /* AppDelegate.swift */; };
 		95B3F4F7235DEAAA00DA429C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3F4F6235DEAAA00DA429C /* SceneDelegate.swift */; };
@@ -48,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		951894EB2369DCA700881270 /* SleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepView.swift; sourceTree = "<group>"; };
 		9557AFDB2369288B002055F0 /* CellModelCapital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModelCapital.swift; sourceTree = "<group>"; };
 		9563E5A42369B8DF00D2BFC9 /* WizardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WizardView.swift; sourceTree = "<group>"; };
 		9563E5A62369B99E00D2BFC9 /* ListSegueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSegueView.swift; sourceTree = "<group>"; };
@@ -56,6 +61,9 @@
 		95984EC423671A0F00AED0AE /* ChildTestLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildTestLoad.swift; sourceTree = "<group>"; };
 		95984EC723671C4C00AED0AE /* testDataChild.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testDataChild.json; sourceTree = "<group>"; };
 		95984EC92367225100AED0AE /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		95994B5E236E0E6800B68151 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		95994B60236E214000B68151 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		95994B64236E21D600B68151 /* RedirectButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedirectButtonView.swift; sourceTree = "<group>"; };
 		95AFC7E32369BB8F00B6C0D9 /* HappyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyView.swift; sourceTree = "<group>"; };
 		95B3F4F1235DEAAA00DA429C /* BabyChild.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyChild.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95B3F4F4235DEAAA00DA429C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,10 +147,12 @@
 				95B4BA022364E59600D0B6D1 /* Models */,
 				95B3F4F4235DEAAA00DA429C /* AppDelegate.swift */,
 				95B3F4F6235DEAAA00DA429C /* SceneDelegate.swift */,
+				951894EB2369DCA700881270 /* SleepView.swift */,
 				95F48E6723624DEA00FB2EB6 /* HomeView.swift */,
 				9563E5A62369B99E00D2BFC9 /* ListSegueView.swift */,
 				9563E5A42369B8DF00D2BFC9 /* WizardView.swift */,
 				95B3F4FB235DEAAA00DA429C /* ContentView.swift */,
+				95994B5E236E0E6800B68151 /* SwiftUIView.swift */,
 				95B3F4FD235DEAAE00DA429C /* Assets.xcassets */,
 				95B3F502235DEAAE00DA429C /* LaunchScreen.storyboard */,
 				95B3F505235DEAAE00DA429C /* Info.plist */,
@@ -195,6 +205,8 @@
 			children = (
 				9557AFDB2369288B002055F0 /* CellModelCapital.swift */,
 				95AFC7E32369BB8F00B6C0D9 /* HappyView.swift */,
+				95994B60236E214000B68151 /* HeaderView.swift */,
+				95994B64236E21D600B68151 /* RedirectButtonView.swift */,
 			);
 			path = HelpViewes;
 			sourceTree = "<group>";
@@ -332,7 +344,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				95B3F4FA235DEAAA00DA429C /* BabyChild.xcdatamodeld in Sources */,
+				95994B61236E214000B68151 /* HeaderView.swift in Sources */,
 				9557AFDC2369288C002055F0 /* CellModelCapital.swift in Sources */,
+				95994B65236E21D600B68151 /* RedirectButtonView.swift in Sources */,
+				95994B5F236E0E6800B68151 /* SwiftUIView.swift in Sources */,
 				95B3F4F5235DEAAA00DA429C /* AppDelegate.swift in Sources */,
 				95B4BA062365F7D100D0B6D1 /* Child.swift in Sources */,
 				95AFC7E42369BB8F00B6C0D9 /* HappyView.swift in Sources */,
@@ -345,6 +360,7 @@
 				95984EC523671A0F00AED0AE /* ChildTestLoad.swift in Sources */,
 				9563E5A52369B8DF00D2BFC9 /* WizardView.swift in Sources */,
 				95B3F4F7235DEAAA00DA429C /* SceneDelegate.swift in Sources */,
+				951894EC2369DCA700881270 /* SleepView.swift in Sources */,
 				95B4BA042364E5C800D0B6D1 /* ChildData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,17 +9,13 @@
 import Foundation
 import UIKit
 
+//let screen = Screen()
+
 struct Screen {
     static var width: CGFloat {
         return UIScreen.main.bounds.width
     }
     static var height: CGFloat {
         return UIScreen.main.bounds.height
-    }
-    static var statusBarHeight: CGFloat {
-        return UIStatusBarManager.accessibilityFrame().height
-    }
-    static var statusBarWidth: CGFloat {
-        return UIStatusBarManager.accessibilityFrame().width
     }
 }

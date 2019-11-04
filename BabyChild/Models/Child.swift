@@ -49,4 +49,7 @@ extension Child{
     func showPicture() -> Image{
         return data.image
     }
+    func showName() -> String{
+        return data.Name
+    }
 }

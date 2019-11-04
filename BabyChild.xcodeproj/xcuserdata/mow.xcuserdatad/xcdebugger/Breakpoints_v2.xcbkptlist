@@ -3,4 +3,23 @@
    uuid = "94D0F318-CC91-4288-9DDC-8032FA9D5D06"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4C6D7B87-4A9A-464C-8122-A99F2A0A97FA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            condition = "showActionSheet"
+            continueAfterRunningActions = "No"
+            filePath = "BabyChild/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
