@@ -12,31 +12,52 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var child: Child
-    @EnvironmentObject var showActionSheet:Int? = nil
+    @EnvironmentObject var clock: Clock
+//    @EnvironmentObject var showActionSheet:Int? = nil
+    init() {
+        // To remove only extra separators below the list:
+        UITableView.appearance().tableFooterView = UIView()
+        // To remove all separators including the actual ones:
+        UITableView.appearance().separatorStyle = .none
+    }
     
     var body: some View {
+        
         VStack(spacing: 0) {
             HeaderView()
                 .environmentObject(child)
-            ScrollView(showsIndicators: false) {
-                VStack(spacing: 16) {
-                    
-                    RedirectButtonView(name: "Sleep", info: "Information", background: Color.orange, action: showActionSheet)
-                    RedirectButtonView(name: "Feed", info: "Info", background: Color.green, action: showActionSheet)
-                    RedirectButtonView(name: "Change", background: Color.yellow, action: showActionSheet)
-                    RedirectButtonView(name: "Entertainment", background: Color.purple, action: showActionSheet)
-                    RedirectButtonView(name: "Health", background: Color.red, action: showActionSheet)
-                    
+            NavigationView{
+                List {
+                    NavigationLink(destination: SleepView()) {
+                        RedirectButtonView(name: "Sleep", info: child.showSleepInfo(), background: Color.blue)
+                    }
+                    NavigationLink(destination: FeedView()) {
+                        RedirectButtonView(name: "Feed", info: "Info", background: Color.green)
+                    }
+                    NavigationLink(destination: DiaperView()) {
+                        RedirectButtonView(name: "Diaper", background: Color.yellow)
+                    }
+                    NavigationLink(destination: HappyView()) {
+                        RedirectButtonView(name: "Entertainment", background: Color.orange)
+                    }
+                    NavigationLink(destination: HappyView()) {
+                        RedirectButtonView(name: "Health", background: Color.red)
+                    }
+                    NavigationLink(destination: HappyView()) {
+                        RedirectButtonView(name: "Notes", background: Color.purple)
+                    }
                 }
+                .navigationBarHidden(true)
+                .navigationBarTitle("")
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
+                .padding(.trailing, -16)
+                .padding()
             }
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
-            .padding()
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
         .edgesIgnoringSafeArea(.top)
         .lineSpacing(0)
         }
-    
 }
 
 struct HomeView_Previews: PreviewProvider {

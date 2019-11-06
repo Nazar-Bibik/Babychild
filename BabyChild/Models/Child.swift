@@ -14,8 +14,8 @@ class Child: Identifiable, ObservableObject{
     @Published var data: ChildData
     @Published var Feed: Bool
     @Published var Sleep: Bool
-    @Published var SleepTime: NSDate?
-    @Published var FeedTime: NSDate?
+    @Published var SleepTime: Date?
+    @Published var FeedTime: Date?
     
     init(childData: ChildData){
         data = childData
@@ -26,13 +26,12 @@ class Child: Identifiable, ObservableObject{
     }
     
     func age() -> Int{
-        let calendar = Calendar.current
-        let birth = calendar.startOfDay(for: data.DOB)
-        let now = calendar.startOfDay(for: Date())
-        
-        let components = calendar.dateComponents([.day], from: birth, to: now)
-        
-        return components.day!
+        return DateHelper.difDays(datetime: data.DOB)
+    }
+    
+    func sleep(sleeping: Bool) {
+        Sleep = sleeping
+        SleepTime = Date()
     }
     
 }
@@ -51,5 +50,21 @@ extension Child{
     }
     func showName() -> String{
         return data.Name
+    }
+//    func showSleepButton() -> String{
+//        if Sleep{
+//            return "Sleeping"
+//        }
+//        return "Awake"
+//    }
+    
+    func showSleepInfo() -> String{
+        if SleepTime != nil{
+            if Sleep{
+                return "Sleeping for " + DateHelper.showTime(datetime: SleepTime!)
+            }
+            return "Awake for " + DateHelper.showTime(datetime: SleepTime!)
+        }
+        return ""
     }
 }

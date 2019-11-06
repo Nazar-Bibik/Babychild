@@ -13,7 +13,7 @@ struct HeaderView: View {
     var body: some View{
         
         HStack {
-                child.showPicture()
+            child.showPicture()
                     .resizable()
                     .scaledToFill()
                     .frame(width: 60, height: 60)
@@ -35,7 +35,7 @@ struct HeaderView: View {
                 }
             }
         .padding()
-        .padding(.top, 20)
+        .padding(.top, 24)
         .background(Color("cHeaderBlue"))
         
     }
@@ -44,6 +44,7 @@ struct HeaderView: View {
 struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
         HeaderView()
+        .environmentObject(childArray[0])
     }
 }
 ////

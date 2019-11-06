@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		951894EC2369DCA700881270 /* SleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951894EB2369DCA700881270 /* SleepView.swift */; };
+		9551C1C22371D151005C449B /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551C1C12371D151005C449B /* FeedView.swift */; };
+		9551C1C42371E9FD005C449B /* DiaperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551C1C32371E9FD005C449B /* DiaperView.swift */; };
+		9551C1C62372267B005C449B /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551C1C52372267B005C449B /* Clock.swift */; };
+		9551C1C823723418005C449B /* Sleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551C1C723723418005C449B /* Sleep.swift */; };
+		9551C1CA23723CD3005C449B /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551C1C923723CD3005C449B /* DateHelper.swift */; };
 		9557AFDC2369288C002055F0 /* CellModelCapital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9557AFDB2369288B002055F0 /* CellModelCapital.swift */; };
 		9563E5A52369B8DF00D2BFC9 /* WizardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9563E5A42369B8DF00D2BFC9 /* WizardView.swift */; };
 		9563E5A72369B99E00D2BFC9 /* ListSegueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9563E5A62369B99E00D2BFC9 /* ListSegueView.swift */; };
@@ -53,6 +58,11 @@
 
 /* Begin PBXFileReference section */
 		951894EB2369DCA700881270 /* SleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepView.swift; sourceTree = "<group>"; };
+		9551C1C12371D151005C449B /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		9551C1C32371E9FD005C449B /* DiaperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaperView.swift; sourceTree = "<group>"; };
+		9551C1C52372267B005C449B /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
+		9551C1C723723418005C449B /* Sleep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sleep.swift; sourceTree = "<group>"; };
+		9551C1C923723CD3005C449B /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		9557AFDB2369288B002055F0 /* CellModelCapital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModelCapital.swift; sourceTree = "<group>"; };
 		9563E5A42369B8DF00D2BFC9 /* WizardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WizardView.swift; sourceTree = "<group>"; };
 		9563E5A62369B99E00D2BFC9 /* ListSegueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSegueView.swift; sourceTree = "<group>"; };
@@ -148,6 +158,8 @@
 				95B3F4F4235DEAAA00DA429C /* AppDelegate.swift */,
 				95B3F4F6235DEAAA00DA429C /* SceneDelegate.swift */,
 				951894EB2369DCA700881270 /* SleepView.swift */,
+				9551C1C12371D151005C449B /* FeedView.swift */,
+				9551C1C32371E9FD005C449B /* DiaperView.swift */,
 				95F48E6723624DEA00FB2EB6 /* HomeView.swift */,
 				9563E5A62369B99E00D2BFC9 /* ListSegueView.swift */,
 				9563E5A42369B8DF00D2BFC9 /* WizardView.swift */,
@@ -196,6 +208,9 @@
 				95984EC423671A0F00AED0AE /* ChildTestLoad.swift */,
 				95984EC92367225100AED0AE /* Screen.swift */,
 				95756435236936390084253B /* MenuItems.swift */,
+				9551C1C52372267B005C449B /* Clock.swift */,
+				9551C1C723723418005C449B /* Sleep.swift */,
+				9551C1C923723CD3005C449B /* DateHelper.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -343,14 +358,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9551C1C22371D151005C449B /* FeedView.swift in Sources */,
 				95B3F4FA235DEAAA00DA429C /* BabyChild.xcdatamodeld in Sources */,
+				9551C1C42371E9FD005C449B /* DiaperView.swift in Sources */,
 				95994B61236E214000B68151 /* HeaderView.swift in Sources */,
 				9557AFDC2369288C002055F0 /* CellModelCapital.swift in Sources */,
 				95994B65236E21D600B68151 /* RedirectButtonView.swift in Sources */,
 				95994B5F236E0E6800B68151 /* SwiftUIView.swift in Sources */,
 				95B3F4F5235DEAAA00DA429C /* AppDelegate.swift in Sources */,
 				95B4BA062365F7D100D0B6D1 /* Child.swift in Sources */,
+				9551C1CA23723CD3005C449B /* DateHelper.swift in Sources */,
 				95AFC7E42369BB8F00B6C0D9 /* HappyView.swift in Sources */,
+				9551C1C823723418005C449B /* Sleep.swift in Sources */,
+				9551C1C62372267B005C449B /* Clock.swift in Sources */,
 				9563E5A72369B99E00D2BFC9 /* ListSegueView.swift in Sources */,
 				95B3F4FC235DEAAA00DA429C /* ContentView.swift in Sources */,
 				95F48E6823624DEA00FB2EB6 /* HomeView.swift in Sources */,

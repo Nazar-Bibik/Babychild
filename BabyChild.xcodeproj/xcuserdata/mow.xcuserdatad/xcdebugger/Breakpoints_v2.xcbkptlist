@@ -7,16 +7,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4C6D7B87-4A9A-464C-8122-A99F2A0A97FA"
+            uuid = "B24BFD1B-2BBB-4075-80FB-AE754FEDC318"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
-            condition = "showActionSheet"
             continueAfterRunningActions = "No"
-            filePath = "BabyChild/HomeView.swift"
+            filePath = "BabyChild/SleepView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
