@@ -51,13 +51,12 @@ extension Child{
     func showName() -> String{
         return data.Name
     }
-//    func showSleepButton() -> String{
-//        if Sleep{
-//            return "Sleeping"
-//        }
-//        return "Awake"
-//    }
-    
+    func showSleepButton() -> String{
+        if Sleep{
+            return "Sleeping"
+        }
+        return "Awake"
+    }
     func showSleepInfo() -> String{
         if SleepTime != nil{
             if Sleep{

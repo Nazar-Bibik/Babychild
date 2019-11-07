@@ -10,6 +10,8 @@ import SwiftUI
 import Foundation
 
 struct SleepRecordView: View{
+    @EnvironmentObject var child: Child
+    
     var body: some View{
         VStack{
             Button(action: {}) {
@@ -21,22 +23,18 @@ struct SleepRecordView: View{
 
 struct SleepView: View {
     @State var openSleepSheet: Bool = false
-    @EnvironmentObject var sleep: Sleep
     @EnvironmentObject var child: Child
-    @EnvironmentObject var clock: Clock
     
     var body: some View {
         VStack{
             Button(action: {
-//                self.openSleepSheet.toggle()
-                self.sleep.toggle()
-                self.child.sleep(sleeping: self.sleep.isSleeping)
+                self.openSleepSheet.toggle()
             }) {
-                RedirectButtonView(name: sleep.showButton(), info: sleep.showTime())
+                RedirectButtonView(name: "yes", info: "yes")
             }
-//            .sheet(isPresented: $openSleepSheet) {
-//                Text("Test")
-//            }
+            .sheet(isPresented: $openSleepSheet) {
+                SleepRecordView().environmentObject(self.child)
+            }
             Divider()
             HStack{
                 Text("Slept during day")
@@ -59,6 +57,6 @@ struct SleepView: View {
 
 struct SleepView_Previews: PreviewProvider {
     static var previews: some View {
-        SleepView()
+        SleepRecordView()
     }
 }

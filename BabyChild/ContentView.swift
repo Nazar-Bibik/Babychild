@@ -9,8 +9,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var clock: Clock
-    @EnvironmentObject var sleep: Sleep
     
     var body: some View {
         TabView() {

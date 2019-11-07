@@ -12,8 +12,8 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var child: Child
-    @EnvironmentObject var clock: Clock
-//    @EnvironmentObject var showActionSheet:Int? = nil
+//    @State var sleepButton: String
+
     init() {
         // To remove only extra separators below the list:
         UITableView.appearance().tableFooterView = UIView()
@@ -28,7 +28,7 @@ struct HomeView: View {
                 .environmentObject(child)
             NavigationView{
                 List {
-                    NavigationLink(destination: SleepView()) {
+                    NavigationLink(destination: SleepView().environmentObject(child)) {
                         RedirectButtonView(name: "Sleep", info: child.showSleepInfo(), background: Color.blue)
                     }
                     NavigationLink(destination: FeedView()) {

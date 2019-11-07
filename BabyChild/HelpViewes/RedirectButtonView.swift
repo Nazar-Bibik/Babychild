@@ -9,8 +9,8 @@
 import SwiftUI
 
 struct RedirectButtonView: View{
-    var name: String
-    var info: String = ""
+    @State var name: String
+    @State var info: String = ""
     var background: Color = .blue
     var body: some View{
         
