@@ -44,7 +44,7 @@ struct HeaderView: View {
 struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
         HeaderView()
-        .environmentObject(childArray[0])
+//        .environmentObject(childArray[0])
     }
 }
 ////

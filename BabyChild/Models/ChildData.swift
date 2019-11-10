@@ -28,7 +28,7 @@ struct ChildData: Equatable, Hashable, Codable {
     }
 
     enum Gender: String, CaseIterable, Codable, Hashable {
-        case girl = "girl"
+        case girls = "girl"
         case boy = "boy"
     }
     

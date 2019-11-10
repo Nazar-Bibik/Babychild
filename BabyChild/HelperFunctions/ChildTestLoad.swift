@@ -9,8 +9,8 @@
 import Foundation
 import SwiftUI
 
-let childData: [ChildData] = load("testDataChild.json")
-let childArray = childData.map{ Child(childData: $0) }
+//let childData: [ChildData] = load("testDataChild.json")
+//let childArray = childData.map{ Child(childData: $0) }
 
 func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T {
     let data: Data

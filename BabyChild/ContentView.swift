@@ -9,21 +9,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var child: Child
+    @State var main: Int = DataHelper.fetchChild()
+    
+    init(){
+        child = DataHelper.getChild()[1]
+    }
     
     var body: some View {
-        TabView() {
-            HomeView()
-                .environmentObject(childArray[0])
-                .tabItem {
-                    Text("Home")
+        ZStack {
+            if (main != -1){
+                TabView() {
+                    HomeView()
+                        .environmentObject(child)
+                        .tabItem {
+                            Text("Home")
 
-            }.tag(1)
-            WizardView(context: wizardMenu)
-                .tabItem{
-                    Text("Wizard")
-            }.tag(2)
+                    }.tag(1)
+                    WizardView(context: wizardMenu)
+                        .tabItem{
+                            Text("Wizard")
+                    }.tag(2)
+                }
+                .edgesIgnoringSafeArea(.top)
+            } else {
+                InitializeView()
+            }
         }
-        .edgesIgnoringSafeArea(.top)
     }
 }
 

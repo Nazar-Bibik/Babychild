@@ -11,7 +11,7 @@ import SwiftUI
 
 struct CellModelCapital: View {
     let name: String
-    var priority: Color
+    var priority: Color = .gray
     var body: some View{
         HStack(alignment: .firstTextBaseline ,spacing: 0) {
             Text(String(name.first!))
@@ -23,7 +23,7 @@ struct CellModelCapital: View {
                 .fontWeight(.heavy)
             Spacer()
         }
-        .padding()
+        .padding(6)
     }
 }
 

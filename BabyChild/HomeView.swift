@@ -29,7 +29,7 @@ struct HomeView: View {
             NavigationView{
                 List {
                     NavigationLink(destination: SleepView().environmentObject(child)) {
-                        RedirectButtonView(name: "Sleep", info: child.showSleepInfo(), background: Color.blue)
+                        RedirectButtonView(name: "Sleep", info: String(self.child.Sleep), background: Color.blue)
                     }
                     NavigationLink(destination: FeedView()) {
                         RedirectButtonView(name: "Feed", info: "Info", background: Color.green)
@@ -57,12 +57,13 @@ struct HomeView: View {
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
         .edgesIgnoringSafeArea(.top)
         .lineSpacing(0)
+        
         }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
-        .environmentObject(childArray[0])
+//        .environmentObject(childArray[0])
     }
 }

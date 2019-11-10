@@ -11,26 +11,24 @@ import SwiftUI
 import Combine
 
 class Child: Identifiable, ObservableObject{
-    @Published var data: ChildData
-    @Published var Feed: Bool
+    @Published var data: ChildData?
     @Published var Sleep: Bool
     @Published var SleepTime: Date?
     @Published var FeedTime: Date?
     
     init(childData: ChildData){
         data = childData
-        Feed = false
         Sleep = false
         SleepTime = nil
         FeedTime = nil
     }
     
     func age() -> Int{
-        return DateHelper.difDays(datetime: data.DOB)
+        return DateHelper.difDays(datetime: data!.DOB)
     }
     
-    func sleep(sleeping: Bool) {
-        Sleep = sleeping
+    func sleep() {
+        Sleep.toggle()
         SleepTime = Date()
     }
     
@@ -46,23 +44,33 @@ extension Child{
     }
     
     func showPicture() -> Image{
-        return data.image
+        return data!.image
     }
+    
     func showName() -> String{
-        return data.Name
+        return data!.Name
     }
+    
     func showSleepButton() -> String{
         if Sleep{
             return "Sleeping"
         }
         return "Awake"
     }
+    
     func showSleepInfo() -> String{
         if SleepTime != nil{
             if Sleep{
-                return "Sleeping for " + DateHelper.showTime(datetime: SleepTime!)
+                return "Sleeping for " + showSleepTime()
             }
-            return "Awake for " + DateHelper.showTime(datetime: SleepTime!)
+            return "Awake for " + showSleepTime()
+        }
+        return ""
+    }
+    
+    func showSleepTime() -> String{
+        if SleepTime != nil{
+            return DateHelper.showTimeFrom(datetime: SleepTime!)
         }
         return ""
     }

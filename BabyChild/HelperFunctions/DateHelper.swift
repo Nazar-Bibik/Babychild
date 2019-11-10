@@ -13,6 +13,7 @@ class DateHelper {
     static func current() -> Date {
         return Date()
     }
+    // return number of days from give date till todays
     static func difDays(datetime: Date) -> Int {
         let calendar = Calendar.current
         let birth = calendar.startOfDay(for: datetime)
@@ -21,18 +22,19 @@ class DateHelper {
         
         return components.day!
     }
+    // return number of minutes from given time till now
     static func difMinutes(datetime: Date) -> Int {
         let calendar = Calendar.current
         let components = calendar.dateComponents([.minute], from: datetime)
         
         return components.minute!
     }
-    static func showTime(datetime: Date) -> String {
+    // return formated string of time passed
+    static func showTimeFrom(datetime: Date) -> String {
         let minutes = difMinutes(datetime: datetime)
-        let hours = minutes / 60
-        let minute = minutes % 60
-        return String(hours) + ":" + String(minute)
+        return showTimeFormated(minutes: minutes)
     }
+    // return string of time from given number of minutes
     static func showTimeFormated(minutes: Int) -> String {
         let hours = minutes / 60
         let minute = minutes % 60
