@@ -7,21 +7,20 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ContentView: View {
-    @ObservedObject var child: Child
+    @Environment(\.managedObjectContext) var managedObjectContext
+    @FetchRequest(fetchRequest: Child.childCheckRequest(id: DataHelper.fetchChild())) var child: FetchedResults<Child>
     @State var main: Int = DataHelper.fetchChild()
+    @FetchRequest(fetchRequest: Child.childFetchRequest()) var children: FetchedResults<Child>
     
-    init(){
-        child = DataHelper.getChild()[1]
-    }
     
     var body: some View {
         ZStack {
-            if (main != -1){
+            if (child.count != 0){
                 TabView() {
                     HomeView()
-                        .environmentObject(child)
                         .tabItem {
                             Text("Home")
 
@@ -33,7 +32,7 @@ struct ContentView: View {
                 }
                 .edgesIgnoringSafeArea(.top)
             } else {
-                InitializeView()
+                InitializeView(child: child, children: children)
             }
         }
     }

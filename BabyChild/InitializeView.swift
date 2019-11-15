@@ -7,15 +7,36 @@
 //
 
 import SwiftUI
+import CoreData
+import Foundation
 
 struct InitializeView: View {
+    var child: FetchedResults<Child>
+    var children: FetchedResults<Child>
+    @State var add: Bool = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            ForEach(self.children) { oneChild in
+                Button(action: {
+                    DataHelper.recordChild(id: oneChild.id)
+                }) {
+                    CellChild(name: oneChild.showName(), photo: oneChild.showPicture(), info: oneChild.showSleepInfo())
+                }
+            }
+            Button(action: {
+                self.add.toggle()
+            }) {
+                Text("Press me")
+            }.sheet(isPresented: $add) {
+                CreateChildView(nextId: self.children.count)
+            }
+        }
     }
 }
 
-struct InitializeView_Previews: PreviewProvider {
-    static var previews: some View {
-        InitializeView()
-    }
-}
+//struct InitializeView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        InitializeView()
+//    }
+//}

@@ -12,16 +12,22 @@ import UIKit
 class DataHelper {
     // Check if there is an active child account
     static func fetchChild() -> Int{
-        return UserDefaults.standard.integer(forKey: "currentChild")
+        if (UserDefaults.standard.object(forKey: "currentChild") != nil){
+            return UserDefaults.standard.integer(forKey: "currentChild")
+        }
+        return -1
     }
     
     static func recordChild(id: Int){
         UserDefaults.standard.set(id, forKey: "currentChild")
     }
     
-    static func getChild() -> [Child]{
-        let childData: [ChildData] = load("testDataChild.json")
-        let childArray = childData.map{ Child(childData: $0) }
-        return childArray
+    static func removeChild(){
+        UserDefaults.standard.removeObject(forKey: "currentChild")
     }
+//    static func getChild() -> [Child]{
+//        let childData: [ChildData] = load("testDataChild.json")
+//        let childArray = childData.map{ Child(childData: $0) }
+//        return childArray
+//    }
 }

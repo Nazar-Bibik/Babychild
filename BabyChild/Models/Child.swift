@@ -9,22 +9,25 @@
 import Foundation
 import SwiftUI
 import Combine
+import CoreData
 
-class Child: Identifiable, ObservableObject{
-    @Published var data: ChildData?
-    @Published var Sleep: Bool
-    @Published var SleepTime: Date?
-    @Published var FeedTime: Date?
+public class Child: NSManagedObject, Identifiable{
+    @NSManaged public var Sleep: Bool
+    @NSManaged public var SleepTime: Date?
+    @NSManaged public var FeedTime: Date?
     
-    init(childData: ChildData){
-        data = childData
-        Sleep = false
-        SleepTime = nil
-        FeedTime = nil
-    }
+    @NSManaged public var id: Int
+    @NSManaged public var Name: String
+    @NSManaged public var Surname: String
+    @NSManaged public var BirthDate: String
+    @NSManaged public var Health: Bool
+    @NSManaged public var Picture: String
+    @NSManaged public var Gender: String
+    @NSManaged public var BloodType: String
+
     
     func age() -> Int{
-        return DateHelper.difDays(datetime: data!.DOB)
+        return DateHelper.difDays(datetime: DOB)
     }
     
     func sleep() {
@@ -44,11 +47,11 @@ extension Child{
     }
     
     func showPicture() -> Image{
-        return data!.image
+        return image
     }
     
     func showName() -> String{
-        return data!.Name
+        return Name
     }
     
     func showSleepButton() -> String{
@@ -73,5 +76,44 @@ extension Child{
             return DateHelper.showTimeFrom(datetime: SleepTime!)
         }
         return ""
+    }
+}
+
+extension Child {
+    var image: Image {
+//        ImageStore.shared.image(name: imageName)
+//        Image("default")
+        Image(Picture)
+    }
+}
+
+extension Child {
+    var DOB: Date {
+        let dateFormater = DateFormatter()
+        dateFormater.dateFormat = "yyyy-MM-dd HH:mm"
+        return dateFormater.date(from: BirthDate)!
+    }
+}
+
+extension Child{
+    static func childFetchRequest() -> NSFetchRequest<Child> {
+        let request: NSFetchRequest<Child> = Child.fetchRequest() as! NSFetchRequest<Child>
+        request.sortDescriptors = [NSSortDescriptor(key: "id", ascending: true)]
+          
+        return request
+    }
+}
+
+extension Child{
+    static func childCheckRequest(id: Int) -> NSFetchRequest<Child> {
+        let request: NSFetchRequest<Child> = Child.fetchRequest() as! NSFetchRequest<Child>
+        do {
+            try request.predicate =  NSPredicate(format: "id == %@", id)
+        } catch {
+            DataHelper.removeChild()
+        }
+        request.sortDescriptors = [NSSortDescriptor(key: "id", ascending: true)]
+        
+        return request
     }
 }
