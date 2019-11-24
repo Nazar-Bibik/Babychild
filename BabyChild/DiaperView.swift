@@ -20,32 +20,11 @@ struct DiaperView: View {
                 RedirectButtonView(name: "PePo")
             }
             Divider()
-            Group{
-                HStack{
-                    Text("Today")
-                    Spacer()
-                    Text("3")
-                }
-                HStack{
-                    Text("Solid")
-                    Spacer()
-                    Text("1")
-                }
-                HStack{
-                    Text("Liquid")
-                    Spacer()
-                    Text("1")
-                }
-                HStack{
-                    Text("Both")
-                    Spacer()
-                    Text("1")
+            ScrollView {
+                List {
+                    /*@START_MENU_TOKEN@*/ /*@PLACEHOLDER=Content@*/Text("Content")/*@END_MENU_TOKEN@*/
                 }
             }
-            .frame(minWidth: 0,  maxWidth: Screen.width/2)
-            .padding(.leading)
-            .padding(.trailing)
-            .padding(.top)
         }
         .padding()
         .navigationBarTitle(Text("Sleep"), displayMode: .inline)

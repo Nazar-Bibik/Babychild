@@ -7,7 +7,81 @@
 //
 
 import Foundation
+import SwiftUI
+import CoreData
 
-class Children {
-    var name: String = "Yes"
+
+class Children: ObservableObject {
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    @Published var childrenData: [ChildData] = []
+    
+    init() {getall()}
+    
+    func getall() {
+        do {
+            childrenData = try context.fetch(ChildData.getAll())
+        } catch {
+            print("Error while getting all children, \(error)")
+        }
+    }
+    
+    func saveContext() {
+        if context.hasChanges{
+            do {
+                try context.save()
+                getall()
+            } catch  {
+                print("Error while saving child, \(error)")
+            }
+        }
+    }
+    
+    func add(name: String, surname: String, dob: Date, health: Bool = false, picture: String = "default", gender: Bool?, blood: String) -> Bool{
+        if (name != "" && surname != "" && dob < Date() && gender != nil && blood != "")
+        {
+            let new = ChildData(context: context)
+            
+            if isempty(){
+                new.id = 0
+            } else {
+                new.id = NSNumber(value: childrenData.last!.id.intValue + 1)
+            }
+            new.name = name
+            new.surname = surname
+            new.dob = dob
+            new.health = NSNumber(value: health)
+            new.picture = picture
+            new.gender = NSNumber(value: gender!)
+            new.blood = blood
+            
+            saveContext()
+            
+            return true
+        }
+        return false
+    }
+    
+    func delete(index: Int) {
+        context.delete(self.childrenData[index])
+        saveContext()
+    }
+    
+//    func update(index: Int){
+//        self.childrenData[index].state = self.creatures[index].state?.isEqual(to: 0) as NSNumber?
+//        saveContext()
+//    }
+    
+    func current() -> ChildData?{
+        let current = DataHelper.fetchChild()
+        if current == nil {return nil}
+        return self.childrenData.first(where: {Int(truncating: $0.id)  == current!} )
+    }
+    
+    func isempty() -> Bool{
+        return childrenData.count == 0
+    }
 }
+
+
+

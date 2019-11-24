@@ -9,19 +9,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var child: Child
-    @State var main: Int = DataHelper.fetchChild()
-    
-    init(){
-        child = DataHelper.getChild()[1]
-    }
+    @ObservedObject var children = Children()
     
     var body: some View {
         ZStack {
-            if (main != -1){
+            if (children.current() != nil){
                 TabView() {
                     HomeView()
-                        .environmentObject(child)
+                        .environmentObject(children.current()!)
                         .tabItem {
                             Text("Home")
 
@@ -33,7 +28,7 @@ struct ContentView: View {
                 }
                 .edgesIgnoringSafeArea(.top)
             } else {
-                InitializeView()
+                InitializeView(children: children, new: children.isempty())
             }
         }
     }

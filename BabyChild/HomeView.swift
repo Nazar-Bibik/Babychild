@@ -28,9 +28,9 @@ struct HomeView: View {
                 .environmentObject(child)
             NavigationView{
                 List {
-                    NavigationLink(destination: SleepView().environmentObject(child)) {
-                        RedirectButtonView(name: "Sleep", info: String(self.child.Sleep), background: Color.blue)
-                    }
+//                    NavigationLink(destination: SleepView().environmentObject(child)) {
+//                        RedirectButtonView(name: "Sleep", info: String(self.$child.childEvent), background: Color.blue)
+//                    }
                     NavigationLink(destination: FeedView()) {
                         RedirectButtonView(name: "Feed", info: "Info", background: Color.green)
                     }

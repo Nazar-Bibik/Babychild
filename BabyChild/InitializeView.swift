@@ -9,13 +9,28 @@
 import SwiftUI
 
 struct InitializeView: View {
+    @ObservedObject var children: Children
+    @State var new: Bool
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            List(self.children.childrenData, id: \.self) {child in
+                HStack {
+//                    CellChild(child: child)
+                    Text(")")
+                }
+            }.sheet(isPresented: $new) {
+                HappyView()
+            }
+            Button(action: { self.new = true }) {
+                Text("New creature")
+            }
+        }
     }
 }
 
 struct InitializeView_Previews: PreviewProvider {
     static var previews: some View {
-        InitializeView()
+        InitializeView(children: Children(), new: true)
     }
 }

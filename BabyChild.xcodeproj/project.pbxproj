@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		951894EC2369DCA700881270 /* SleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951894EB2369DCA700881270 /* SleepView.swift */; };
+		953EC677238A0F83002C46DD /* ChildEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953EC676238A0F83002C46DD /* ChildEvent.swift */; };
+		953EC679238A2CBC002C46DD /* CellChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953EC678238A2CBC002C46DD /* CellChild.swift */; };
 		9551C1C22371D151005C449B /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551C1C12371D151005C449B /* FeedView.swift */; };
 		9551C1C42371E9FD005C449B /* DiaperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551C1C32371E9FD005C449B /* DiaperView.swift */; };
 		9551C1CA23723CD3005C449B /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551C1C923723CD3005C449B /* DateHelper.swift */; };
@@ -59,6 +61,8 @@
 
 /* Begin PBXFileReference section */
 		951894EB2369DCA700881270 /* SleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepView.swift; sourceTree = "<group>"; };
+		953EC676238A0F83002C46DD /* ChildEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildEvent.swift; sourceTree = "<group>"; };
+		953EC678238A2CBC002C46DD /* CellChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellChild.swift; sourceTree = "<group>"; };
 		9551C1C12371D151005C449B /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		9551C1C32371E9FD005C449B /* DiaperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaperView.swift; sourceTree = "<group>"; };
 		9551C1C923723CD3005C449B /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
@@ -210,6 +214,7 @@
 				95B4BA052365F7D100D0B6D1 /* Child.swift */,
 				95756435236936390084253B /* MenuItems.swift */,
 				95AB04AB238A02F400B3F540 /* Children.swift */,
+				953EC676238A0F83002C46DD /* ChildEvent.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				95994B5E236E0E6800B68151 /* SwiftUIView.swift */,
 				95994B60236E214000B68151 /* HeaderView.swift */,
 				95994B64236E21D600B68151 /* RedirectButtonView.swift */,
+				953EC678238A2CBC002C46DD /* CellChild.swift */,
 			);
 			path = HelpViewes;
 			sourceTree = "<group>";
@@ -377,11 +383,13 @@
 				9557AFDC2369288C002055F0 /* CellModelCapital.swift in Sources */,
 				95994B65236E21D600B68151 /* RedirectButtonView.swift in Sources */,
 				95994B5F236E0E6800B68151 /* SwiftUIView.swift in Sources */,
+				953EC679238A2CBC002C46DD /* CellChild.swift in Sources */,
 				95B3F4F5235DEAAA00DA429C /* AppDelegate.swift in Sources */,
 				95B4BA062365F7D100D0B6D1 /* Child.swift in Sources */,
 				9551C1CA23723CD3005C449B /* DateHelper.swift in Sources */,
 				95AFC7E42369BB8F00B6C0D9 /* HappyView.swift in Sources */,
 				9563E5A72369B99E00D2BFC9 /* ListSegueView.swift in Sources */,
+				953EC677238A0F83002C46DD /* ChildEvent.swift in Sources */,
 				95B3F4FC235DEAAA00DA429C /* ContentView.swift in Sources */,
 				95F48E6823624DEA00FB2EB6 /* HomeView.swift in Sources */,
 				95756436236936390084253B /* MenuItems.swift in Sources */,
