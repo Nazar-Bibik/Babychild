@@ -25,7 +25,7 @@ class DateHelper {
     // return number of minutes from given time till now
     static func difMinutes(datetime: Date) -> Int {
         let calendar = Calendar.current
-        let components = calendar.dateComponents([.minute], from: datetime)
+        let components = calendar.dateComponents([.minute], from: datetime, to: Date())
         
         return components.minute!
     }
@@ -36,8 +36,10 @@ class DateHelper {
     }
     // return string of time from given number of minutes
     static func showTimeFormated(minutes: Int) -> String {
-        let hours = minutes / 60
+        let hour = minutes / 60
         let minute = minutes % 60
-        return String(hours) + ":" + String(minute)
+        let minutez = minutes < 10 ? "0" : ""
+        let hourz = hour < 10 ? "0" : ""
+        return hourz + String(hour) + ":" + minutez + String(minute)
     }
 }

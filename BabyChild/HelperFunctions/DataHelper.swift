@@ -7,21 +7,34 @@
 //
 
 import Foundation
-import UIKit
+//import UIKit
+import SwiftUI
 
-struct DataHelper {
+class DataHelper {
     static let childKey = "currentChild"
+    static let colors = ["cHeaderBlue", "cHeaderRed", "cHeaderGreen"]
     // Check if there is an active child account
     static func fetchChild() -> Int?{
         return UserDefaults.standard.integer(forKey: childKey)
     }
-    
     static func setChild(id: Int){
         UserDefaults.standard.set(id, forKey: childKey)
     }
     
     static func unsetChild(){
         UserDefaults.standard.removeObject(forKey: childKey)
+    }
+    
+    static func getHeaderColor() -> String{
+        let c = UserDefaults.standard.string(forKey: "cHeader")
+        if c == nil {
+            return "cHeaderBlue"
+        }
+        return c!
+    }
+    
+    static func setHeaderColor(name: String){
+        UserDefaults.standard.set(name, forKey: "cHeader")
     }
     
 //    static func getChild() -> [Child]{

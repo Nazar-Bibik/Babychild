@@ -9,14 +9,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject private var child: Child
     @ObservedObject var children = Children()
+    @State var activeProfile: Bool = true
+    
     
     var body: some View {
         ZStack {
-            if (children.current() != nil){
+            if (children.current() != nil && activeProfile){
                 TabView() {
-                    HomeView()
-                        .environmentObject(children.current()!)
+                    HomeView(activeProfile: $activeProfile)
                         .tabItem {
                             Text("Home")
 
@@ -25,12 +27,16 @@ struct ContentView: View {
                         .tabItem{
                             Text("Wizard")
                     }.tag(2)
+                    UserSettingsView()
+                        .tabItem{
+                            Text("Settings")
+                    }.tag(3)
                 }
                 .edgesIgnoringSafeArea(.top)
             } else {
-                InitializeView(children: children, new: children.isempty())
+                InitializeView(children: children, activeProfile: $activeProfile, new: children.isempty())
             }
-        }
+        }.transition(.opacity)
     }
 }
 

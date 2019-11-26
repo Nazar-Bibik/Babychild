@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		951894EC2369DCA700881270 /* SleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951894EB2369DCA700881270 /* SleepView.swift */; };
+		953279BA238D7B8C00FA9280 /* UserSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953279B9238D7B8C00FA9280 /* UserSettingsView.swift */; };
+		953279BC238DA56200FA9280 /* SleepRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953279BB238DA56200FA9280 /* SleepRecord.swift */; };
 		953EC677238A0F83002C46DD /* ChildEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953EC676238A0F83002C46DD /* ChildEvent.swift */; };
 		953EC679238A2CBC002C46DD /* CellChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953EC678238A2CBC002C46DD /* CellChild.swift */; };
+		954D70A8238B630F00478AED /* ConversionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D70A7238B630F00478AED /* ConversionHelper.swift */; };
 		9551C1C22371D151005C449B /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551C1C12371D151005C449B /* FeedView.swift */; };
 		9551C1C42371E9FD005C449B /* DiaperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551C1C32371E9FD005C449B /* DiaperView.swift */; };
 		9551C1CA23723CD3005C449B /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551C1C923723CD3005C449B /* DateHelper.swift */; };
@@ -39,6 +42,8 @@
 		95B4BA042364E5C800D0B6D1 /* ChildData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B4BA032364E5C800D0B6D1 /* ChildData.swift */; };
 		95B4BA062365F7D100D0B6D1 /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B4BA052365F7D100D0B6D1 /* Child.swift */; };
 		95C6BCD423774AF000EF7F90 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C6BCD323774AF000EF7F90 /* DataHelper.swift */; };
+		95D2AECD238CB3840013844E /* SlimButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2AECC238CB3840013844E /* SlimButtonView.swift */; };
+		95EFFB15238B3B2E00781F37 /* CreateProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EFFB14238B3B2E00781F37 /* CreateProfileView.swift */; };
 		95F48E6823624DEA00FB2EB6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F48E6723624DEA00FB2EB6 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,8 +66,11 @@
 
 /* Begin PBXFileReference section */
 		951894EB2369DCA700881270 /* SleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepView.swift; sourceTree = "<group>"; };
+		953279B9238D7B8C00FA9280 /* UserSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsView.swift; sourceTree = "<group>"; };
+		953279BB238DA56200FA9280 /* SleepRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepRecord.swift; sourceTree = "<group>"; };
 		953EC676238A0F83002C46DD /* ChildEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildEvent.swift; sourceTree = "<group>"; };
 		953EC678238A2CBC002C46DD /* CellChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellChild.swift; sourceTree = "<group>"; };
+		954D70A7238B630F00478AED /* ConversionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionHelper.swift; sourceTree = "<group>"; };
 		9551C1C12371D151005C449B /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		9551C1C32371E9FD005C449B /* DiaperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaperView.swift; sourceTree = "<group>"; };
 		9551C1C923723CD3005C449B /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
@@ -98,6 +106,8 @@
 		95B4BA032364E5C800D0B6D1 /* ChildData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildData.swift; sourceTree = "<group>"; };
 		95B4BA052365F7D100D0B6D1 /* Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
 		95C6BCD323774AF000EF7F90 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
+		95D2AECC238CB3840013844E /* SlimButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlimButtonView.swift; sourceTree = "<group>"; };
+		95EFFB14238B3B2E00781F37 /* CreateProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileView.swift; sourceTree = "<group>"; };
 		95F48E6723624DEA00FB2EB6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,8 +180,10 @@
 				95F48E6723624DEA00FB2EB6 /* HomeView.swift */,
 				9563E5A62369B99E00D2BFC9 /* ListSegueView.swift */,
 				9563E5A42369B8DF00D2BFC9 /* WizardView.swift */,
-				95B3F4FB235DEAAA00DA429C /* ContentView.swift */,
+				95EFFB14238B3B2E00781F37 /* CreateProfileView.swift */,
+				953279B9238D7B8C00FA9280 /* UserSettingsView.swift */,
 				9551C1CB23726832005C449B /* InitializeView.swift */,
+				95B3F4FB235DEAAA00DA429C /* ContentView.swift */,
 				95B3F4FD235DEAAE00DA429C /* Assets.xcassets */,
 				95B3F502235DEAAE00DA429C /* LaunchScreen.storyboard */,
 				95B3F505235DEAAE00DA429C /* Info.plist */,
@@ -215,6 +227,7 @@
 				95756435236936390084253B /* MenuItems.swift */,
 				95AB04AB238A02F400B3F540 /* Children.swift */,
 				953EC676238A0F83002C46DD /* ChildEvent.swift */,
+				953279BB238DA56200FA9280 /* SleepRecord.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -227,6 +240,7 @@
 				95994B5E236E0E6800B68151 /* SwiftUIView.swift */,
 				95994B60236E214000B68151 /* HeaderView.swift */,
 				95994B64236E21D600B68151 /* RedirectButtonView.swift */,
+				95D2AECC238CB3840013844E /* SlimButtonView.swift */,
 				953EC678238A2CBC002C46DD /* CellChild.swift */,
 			);
 			path = HelpViewes;
@@ -239,6 +253,7 @@
 				9551C1C923723CD3005C449B /* DateHelper.swift */,
 				95984EC423671A0F00AED0AE /* ChildTestLoad.swift */,
 				95C6BCD323774AF000EF7F90 /* DataHelper.swift */,
+				954D70A7238B630F00478AED /* ConversionHelper.swift */,
 			);
 			path = HelperFunctions;
 			sourceTree = "<group>";
@@ -379,12 +394,16 @@
 				95B3F4FA235DEAAA00DA429C /* BabyChild.xcdatamodeld in Sources */,
 				9551C1C42371E9FD005C449B /* DiaperView.swift in Sources */,
 				9551C1CC23726832005C449B /* InitializeView.swift in Sources */,
+				953279BC238DA56200FA9280 /* SleepRecord.swift in Sources */,
 				95994B61236E214000B68151 /* HeaderView.swift in Sources */,
 				9557AFDC2369288C002055F0 /* CellModelCapital.swift in Sources */,
 				95994B65236E21D600B68151 /* RedirectButtonView.swift in Sources */,
 				95994B5F236E0E6800B68151 /* SwiftUIView.swift in Sources */,
 				953EC679238A2CBC002C46DD /* CellChild.swift in Sources */,
 				95B3F4F5235DEAAA00DA429C /* AppDelegate.swift in Sources */,
+				95EFFB15238B3B2E00781F37 /* CreateProfileView.swift in Sources */,
+				95D2AECD238CB3840013844E /* SlimButtonView.swift in Sources */,
+				953279BA238D7B8C00FA9280 /* UserSettingsView.swift in Sources */,
 				95B4BA062365F7D100D0B6D1 /* Child.swift in Sources */,
 				9551C1CA23723CD3005C449B /* DateHelper.swift in Sources */,
 				95AFC7E42369BB8F00B6C0D9 /* HappyView.swift in Sources */,
@@ -393,6 +412,7 @@
 				95B3F4FC235DEAAA00DA429C /* ContentView.swift in Sources */,
 				95F48E6823624DEA00FB2EB6 /* HomeView.swift in Sources */,
 				95756436236936390084253B /* MenuItems.swift in Sources */,
+				954D70A8238B630F00478AED /* ConversionHelper.swift in Sources */,
 				95756432236930180084253B /* testDataWizardCells.swift in Sources */,
 				95AB04AC238A02F400B3F540 /* Children.swift in Sources */,
 				95984ECA2367225100AED0AE /* Screen.swift in Sources */,

@@ -36,7 +36,7 @@ struct HeaderView: View {
             }
         .padding()
         .padding(.top, 24)
-        .background(Color("cHeaderBlue"))
+        .background(Color(DataHelper.getHeaderColor()))
         
     }
 }

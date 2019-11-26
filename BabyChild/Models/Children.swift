@@ -38,12 +38,13 @@ class Children: ObservableObject {
     }
     
     func add(name: String, surname: String, dob: Date, health: Bool = false, picture: String = "default", gender: Bool?, blood: String) -> Bool{
-        if (name != "" && surname != "" && dob < Date() && gender != nil && blood != "")
+        if (name != "" && surname != "" && dob < Date() && gender != nil)
         {
             let new = ChildData(context: context)
             
             if isempty(){
                 new.id = 0
+                DataHelper.setChild(id: 0)
             } else {
                 new.id = NSNumber(value: childrenData.last!.id.intValue + 1)
             }
@@ -55,6 +56,12 @@ class Children: ObservableObject {
             new.gender = NSNumber(value: gender!)
             new.blood = blood
             
+            let newE = ChildEvent(context: context)
+            newE.childid = new.id
+            newE.feedtime = nil
+            newE.sleeping = NSNumber(0)
+            newE.sleeptime = nil
+            
             saveContext()
             
             return true
@@ -64,6 +71,11 @@ class Children: ObservableObject {
     
     func delete(index: Int) {
         context.delete(self.childrenData[index])
+        do {
+            try context.delete(context.fetch(ChildEvent.getAll()).first(where: { $0.childid == self.childrenData[index].id} )!)
+        } catch {
+            print("Error while deleting a childEvent, \(error)")
+        }
         saveContext()
     }
     

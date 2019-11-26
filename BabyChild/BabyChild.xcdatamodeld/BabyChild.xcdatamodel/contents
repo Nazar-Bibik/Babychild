@@ -16,8 +16,18 @@
         <attribute name="sleeping" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="sleeptime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
+    <entity name="DiaperRecord" representedClassName="DiaperRecord" syncable="YES" codeGenerationType="class"/>
+    <entity name="FeedRecord" representedClassName="FeedRecord" syncable="YES" codeGenerationType="class"/>
+    <entity name="HealthRecord" representedClassName="HealthRecord" syncable="YES" codeGenerationType="class"/>
+    <entity name="Media" representedClassName="Media" syncable="YES" codeGenerationType="class"/>
+    <entity name="SleepRecord" representedClassName="SleepRecord" syncable="YES" codeGenerationType="class"/>
     <elements>
-        <element name="ChildData" positionX="-63" positionY="-18" width="128" height="163"/>
-        <element name="ChildEvent" positionX="-63" positionY="45" width="128" height="103"/>
+        <element name="ChildData" positionX="-133.8984375" positionY="-99.1875" width="129.40234375" height="163"/>
+        <element name="ChildEvent" positionX="63.7265625" positionY="-131.859375" width="128" height="103"/>
+        <element name="SleepRecord" positionX="-6.27734375" positionY="398.84765625" width="128" height="43"/>
+        <element name="FeedRecord" positionX="-338.23828125" positionY="50.01953125" width="128" height="43"/>
+        <element name="DiaperRecord" positionX="229.609375" positionY="-19.93359375" width="128" height="43"/>
+        <element name="HealthRecord" positionX="197.546875" positionY="150.484375" width="128" height="43"/>
+        <element name="Media" positionX="-184.25390625" positionY="195.73046875" width="128" height="43"/>
     </elements>
 </model>

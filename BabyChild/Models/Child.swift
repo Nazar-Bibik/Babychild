@@ -13,17 +13,34 @@ import SwiftUI
 class Child: ObservableObject{
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    @Published var childData: ChildData
-    @Published var childEvent: ChildEvent
+    @Published var childData: ChildData = ChildData()
+    @Published var childEvent: ChildEvent = ChildEvent()
     
-    init(childData: ChildData) throws{
-        self.childData = childData
-//        do {
-//            childEvent = try context.fetch(ChildEvent.getAll()).first(where: { $0.childid == childData.id} )!
-//        } catch {
-//            print("You've f**ed up in fetching all, \(error)")
-//        }
-        childEvent = try context.fetch(ChildEvent.getAll()).first(where: { $0.childid == childData.id } )!
+    init(childData: ChildData?) {
+        recreate(childData: childData)
+    }
+    
+    func recreate(childData: ChildData?){
+        if (childData != nil){
+            self.childData = childData!
+            do {
+                self.childEvent = try context.fetch(ChildEvent.getAll()).first(where: { $0.childid == childData!.id} )!
+            } catch {
+                print("Error while getting a childEvent, \(error)")
+            }
+//            childEvent = try context.fetch(ChildEvent.getAll()).first(where: { $0.childid == childData!.id } )!
+        }
+    }
+    
+    func saveContext() {
+        if context.hasChanges{
+            do {
+                try context.save()
+                recreate(childData: childData)
+            } catch  {
+                print("Error while saving child, \(error)")
+            }
+        }
     }
     
     func age() -> Int{
@@ -31,10 +48,15 @@ class Child: ObservableObject{
     }
     
     func sleep() {
-//        Sleep.toggle()
-//        SleepTime = Date()
+        childEvent.sleeping = NSNumber(value: childEvent.sleeping.isEqual(to: 0))
+        childEvent.sleeptime = Date()
+        saveContext()
     }
     
+    func feed() {
+        childEvent.feedtime = Date()
+        saveContext()
+    }
 }
 
 extension Child{
@@ -74,6 +96,17 @@ extension Child{
     func showSleepTime() -> String{
         if childEvent.sleeptime != nil{
             return DateHelper.showTimeFrom(datetime: childEvent.sleeptime!)
+        }
+        return ""
+    }
+    
+    func isSleeping() -> Bool{
+        return childEvent.sleeping != 0
+    }
+    
+    func showFeedInfo() -> String{
+        if childEvent.feedtime != nil{
+            return DateHelper.showTimeFrom(datetime: childEvent.feedtime!)
         }
         return ""
     }

@@ -10,38 +10,46 @@ import SwiftUI
 import Foundation
 
 struct CellChild: View {
-//    var child: ChildData = ChildData()
-    
-//    init() {
-//        child.id = 0
-//        child.name = "Name"
-//        child.surname = "Surname"
-//        child.dob = Date()
-//        child.health = false
-//        child.picture = "default"
-//        child.gender = true
-//        child.blood = "AB+"
-//    }
+    var child: ChildData
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Image(child.picture)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: Screen.width/3, height: Screen.width/3)
+                .clipShape(Circle())
+                .scaledToFit()
+                .shadow(color: .secondary, radius: 6)
+            Text(child.name)
+                .fontWeight(.heavy)
+                .colorInvert()
+                .font(.largeTitle)
+                .lineLimit(1)
+            Spacer()
+        }
+    .padding()
+    .background(child.gender.boolValue ? Color.blue : Color.red)
+    .clipShape(Capsule())
     }
 }
 
-struct CellChild_Previews: PreviewProvider {
-//    static var child = ChildData()
+//struct CellChild_Previews: PreviewProvider {
+//    var child: ChildData = ChildData()
 //    init() {
-//        CellChild_Previews.child.id = 0
-//        CellChild_Previews.child.name = "Name"
-//        CellChild_Previews.child.surname = "Surname"
-//        CellChild_Previews.child.dob = Date()
-//        CellChild_Previews.child.health = false
-//        CellChild_Previews.child.picture = "default"
-//        CellChild_Previews.child.gender = true
-//        CellChild_Previews.child.blood = "AB+"
+//        let c = ChildData()
+//        c.id = 0
+//        c.name = "Name"
+//        c.surname = "Surname"
+//        c.dob = Date()
+//        c.health = false
+//        c.picture = "default"
+//        c.gender = true
+//        c.blood = "AB+"
+//        self.child = c
 //    }
-    static var previews: some View {
-        CellChild()
-    }
-}
+//    static var previews: some View {
+//        CellChild(child: child)
+//    }
+//}
 

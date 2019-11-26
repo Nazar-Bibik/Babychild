@@ -16,25 +16,24 @@ struct SleepView: View {
     
     var body: some View {
         VStack{
-//            Button(action: {
-//                if self.child.Sleep{
-//                    self.child.sleep()
-//                    self.child.Sleep = false
-//                } else {
-//                self.openSleepSheet.toggle()
-//                }
-//            }) {
-//                RedirectButtonView(name: String(self.$child.Sleep), info: self.child.showSleepTime())
-//            }.actionSheet(isPresented: $openSleepSheet) {
-//                ActionSheet(
-//                    title: Text("Save sleep time?"),
-//                    buttons: [
-//                        .default(Text("Wake up"), action:{self.child.sleep()}),
-//                        .destructive(Text("Cancel"))
-//                    ]
-//
-//                )
-//            }
+            Button(action: {
+                if !self.child.isSleeping(){
+                    self.child.sleep()
+                } else {
+                self.openSleepSheet.toggle()
+                }
+            }) {
+                RedirectButtonView(name: child.showSleepButton(), info: self.child.showSleepTime())
+            }.actionSheet(isPresented: $openSleepSheet) {
+                ActionSheet(
+                    title: Text("Save sleep time?"),
+                    buttons: [
+                        .default(Text("Wake up"), action:{self.child.sleep()}),
+                        .destructive(Text("Cancel"))
+                    ]
+
+                )
+            }
             Divider()
             HStack{
                 Text("Slept during day")
@@ -55,8 +54,8 @@ struct SleepView: View {
     }
 }
 
-struct SleepView_Previews: PreviewProvider {
-    static var previews: some View {
-        SleepView()
-    }
-}
+//struct SleepView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SleepView()
+//    }
+//}
