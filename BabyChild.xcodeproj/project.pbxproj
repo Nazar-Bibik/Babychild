@@ -10,6 +10,9 @@
 		951894EC2369DCA700881270 /* SleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951894EB2369DCA700881270 /* SleepView.swift */; };
 		953279BA238D7B8C00FA9280 /* UserSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953279B9238D7B8C00FA9280 /* UserSettingsView.swift */; };
 		953279BC238DA56200FA9280 /* SleepRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953279BB238DA56200FA9280 /* SleepRecord.swift */; };
+		953279BE238DAAFD00FA9280 /* SleepEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953279BD238DAAFD00FA9280 /* SleepEvent.swift */; };
+		953279C0238DFAC300FA9280 /* DiaperEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953279BF238DFAC300FA9280 /* DiaperEvent.swift */; };
+		953279C2238DFFB700FA9280 /* DiaperRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953279C1238DFFB700FA9280 /* DiaperRecord.swift */; };
 		953EC677238A0F83002C46DD /* ChildEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953EC676238A0F83002C46DD /* ChildEvent.swift */; };
 		953EC679238A2CBC002C46DD /* CellChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953EC678238A2CBC002C46DD /* CellChild.swift */; };
 		954D70A8238B630F00478AED /* ConversionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D70A7238B630F00478AED /* ConversionHelper.swift */; };
@@ -68,6 +71,9 @@
 		951894EB2369DCA700881270 /* SleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepView.swift; sourceTree = "<group>"; };
 		953279B9238D7B8C00FA9280 /* UserSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsView.swift; sourceTree = "<group>"; };
 		953279BB238DA56200FA9280 /* SleepRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepRecord.swift; sourceTree = "<group>"; };
+		953279BD238DAAFD00FA9280 /* SleepEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepEvent.swift; sourceTree = "<group>"; };
+		953279BF238DFAC300FA9280 /* DiaperEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaperEvent.swift; sourceTree = "<group>"; };
+		953279C1238DFFB700FA9280 /* DiaperRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaperRecord.swift; sourceTree = "<group>"; };
 		953EC676238A0F83002C46DD /* ChildEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildEvent.swift; sourceTree = "<group>"; };
 		953EC678238A2CBC002C46DD /* CellChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellChild.swift; sourceTree = "<group>"; };
 		954D70A7238B630F00478AED /* ConversionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionHelper.swift; sourceTree = "<group>"; };
@@ -228,6 +234,9 @@
 				95AB04AB238A02F400B3F540 /* Children.swift */,
 				953EC676238A0F83002C46DD /* ChildEvent.swift */,
 				953279BB238DA56200FA9280 /* SleepRecord.swift */,
+				953279BD238DAAFD00FA9280 /* SleepEvent.swift */,
+				953279BF238DFAC300FA9280 /* DiaperEvent.swift */,
+				953279C1238DFFB700FA9280 /* DiaperRecord.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -395,6 +404,7 @@
 				9551C1C42371E9FD005C449B /* DiaperView.swift in Sources */,
 				9551C1CC23726832005C449B /* InitializeView.swift in Sources */,
 				953279BC238DA56200FA9280 /* SleepRecord.swift in Sources */,
+				953279C0238DFAC300FA9280 /* DiaperEvent.swift in Sources */,
 				95994B61236E214000B68151 /* HeaderView.swift in Sources */,
 				9557AFDC2369288C002055F0 /* CellModelCapital.swift in Sources */,
 				95994B65236E21D600B68151 /* RedirectButtonView.swift in Sources */,
@@ -421,7 +431,9 @@
 				95B3F4F7235DEAAA00DA429C /* SceneDelegate.swift in Sources */,
 				951894EC2369DCA700881270 /* SleepView.swift in Sources */,
 				95B4BA042364E5C800D0B6D1 /* ChildData.swift in Sources */,
+				953279C2238DFFB700FA9280 /* DiaperRecord.swift in Sources */,
 				95C6BCD423774AF000EF7F90 /* DataHelper.swift in Sources */,
+				953279BE238DAAFD00FA9280 /* SleepEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

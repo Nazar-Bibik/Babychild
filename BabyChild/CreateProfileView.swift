@@ -16,7 +16,7 @@ struct CreateProfileView: View {
     @State var name: String = ""
     @State var surname: String = ""
     @State var dob: Date = Date() + 3600
-    @State var health: Bool = false
+    @State var health: Bool = true
     @State var picture: String = "default"
     @State var gender: Bool? = nil
     @State var blood: String = ""
@@ -35,12 +35,12 @@ struct CreateProfileView: View {
                         .font(.headline)
                     HStack {
                         Spacer()
-                        SlimButtonView(name: "Boy", background: gender ?? false ? .blue : .gray)
+                        SlimButtonView(name: "Boy", background: gender ?? false ? Color("boy") : .gray)
                             .onTapGesture {
                                 self.gender = true
                         }
                         Spacer()
-                        SlimButtonView(name: "Girl", background: gender ?? true ? .gray : .red)
+                        SlimButtonView(name: "Girl", background: gender ?? true ? .gray : Color("girl"))
                             .onTapGesture {
                                 self.gender = false
                         }
@@ -62,9 +62,9 @@ struct CreateProfileView: View {
                     }
                     .pickerStyle(SegmentedPickerStyle())
                 }
-                Toggle(isOn: $health) {
-                    Text("Show health bar")
-                }
+//                Toggle(isOn: $health) {
+//                    Text("Show health bar")
+//                }
             }
 
             Button(action: {

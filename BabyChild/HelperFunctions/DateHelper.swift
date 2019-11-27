@@ -38,8 +38,15 @@ class DateHelper {
     static func showTimeFormated(minutes: Int) -> String {
         let hour = minutes / 60
         let minute = minutes % 60
-        let minutez = minutes < 10 ? "0" : ""
+        let minutez = minute < 10 ? "0" : ""
         let hourz = hour < 10 ? "0" : ""
         return hourz + String(hour) + ":" + minutez + String(minute)
+    }
+    
+    static func showTime(datetime: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+
+        return "\(dateFormatter.string(from: datetime))"
     }
 }

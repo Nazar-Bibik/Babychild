@@ -29,7 +29,7 @@ struct CellChild: View {
             Spacer()
         }
     .padding()
-    .background(child.gender.boolValue ? Color.blue : Color.red)
+    .background(child.gender.boolValue ? Color("boy") : Color("girl"))
     .clipShape(Capsule())
     }
 }

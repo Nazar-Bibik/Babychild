@@ -9,31 +9,49 @@
 import SwiftUI
 
 struct DiaperView: View {
+    @ObservedObject var diaper: DiaperRecord
+    
+    
     var body: some View {
         
         VStack{
             HStack{
                 VStack(spacing: 24){
-                    RedirectButtonView(name: "Pee")
-                    RedirectButtonView(name: "Poo")
+                    Button(action: {self.diaper.newRecord(type: 0)}) {
+                        RedirectButtonView(name: "Pee")
+                    }
+                    Button(action: {self.diaper.newRecord(type: 1)}) {
+                        RedirectButtonView(name: "Poo")
+                    }
                 }
-                RedirectButtonView(name: "PePo")
+                Button(action: {self.diaper.newRecord(type: 2)}) {
+                    RedirectButtonView(name: "PePo")
+                }
             }
             Divider()
             ScrollView {
-                List {
-                    /*@START_MENU_TOKEN@*/ /*@PLACEHOLDER=Content@*/Text("Content")/*@END_MENU_TOKEN@*/
+//                List(diaper.diaperEvents, id: \.childid) { item in
+                ForEach(self.diaper.diaperEvents, id: \.self) {item in
+                    HStack{
+                        SlimButtonView(name: self.diaper.showTime(item: item))
+                        .font(.system(size: 14, design: .monospaced))
+                        Spacer()
+                        Text(self.diaper.showType(item: item))
+                            .font(.title)
+                        Spacer()
+                    }
                 }
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
             }
         }
         .padding()
-        .navigationBarTitle(Text("Sleep"), displayMode: .inline)
+        .navigationBarTitle(Text("Diaper"), displayMode: .inline)
         
     }
 }
 
 struct DiaperView_Previews: PreviewProvider {
     static var previews: some View {
-        DiaperView()
+        DiaperView(diaper: DiaperRecord(childData: ChildData()))
     }
 }

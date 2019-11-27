@@ -1,5 +1,5 @@
 //
-//  SleepRecord.swift
+//  SleepEvent.swift
 //  BabyChild
 //
 //  Created by Mow on 26/11/2019.
@@ -8,3 +8,11 @@
 
 import Foundation
 import CoreData
+import SwiftUI
+
+
+class Sleep{
+    
+}
+
+

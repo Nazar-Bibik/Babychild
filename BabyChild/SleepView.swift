@@ -38,13 +38,13 @@ struct SleepView: View {
             HStack{
                 Text("Slept during day")
                 Spacer()
-                Text("00:00:00")
+                Text("1:23")
             }
             .padding()
             HStack{
                 Text("Slept during night")
                 Spacer()
-                Text("00:00:00")
+                Text("12:32")
             }
             .padding()
         }

@@ -12,7 +12,9 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var child: Child
+    @ObservedObject var diaper: DiaperRecord
     @Binding var activeProfile: Bool
+    @State var screenHome = Screen.homeList
     
 //    @State var sleepButton: String
 
@@ -28,43 +30,47 @@ struct HomeView: View {
                     }
             }
             NavigationView{
+                
                 List {
-//                    EmptyView()
-//                        .frame(minWidth: 0, maxWidth: .infinity, maxHeight: )
-                    NavigationLink(destination: SleepView().environmentObject(child)) {
-                        RedirectButtonView(name: "Sleep", info: child.showSleepInfo(), background: Color.blue)
+                    if (screenHome != 0){
+                    Spacer()
+                        .frame(height: screenHome)
+//                        .padding(0)
                     }
-                    NavigationLink(destination: FeedView()) {
-                        RedirectButtonView(name: "Feed", info: child.showFeedInfo(), background: Color.green)
+                    Group{
+                        NavigationLink(destination: SleepView().environmentObject(child)) {
+                            RedirectButtonView(name: "Sleep", info: child.showSleepInfo(), background: Color.blue)
+                        }
+                        NavigationLink(destination: FeedView()) {
+                            RedirectButtonView(name: "Feed", info: child.showFeedInfo(), background: Color.green)
+                        }
+                        NavigationLink(destination: DiaperView(diaper: diaper)) {
+                            RedirectButtonView(name: "Diaper", background: Color.yellow)
+                        }
+                        NavigationLink(destination: HappyView()) {
+                            RedirectButtonView(name: "Entertainment", background: Color.orange)
+                        }
+                        NavigationLink(destination: HappyView()) {
+                            RedirectButtonView(name: "Health", background: Color.red)
+                        }
+                        NavigationLink(destination: HappyView()) {
+                            RedirectButtonView(name: "Notes", background: Color.purple)
+                        }
                     }
-                    NavigationLink(destination: DiaperView()) {
-                        RedirectButtonView(name: "Diaper", background: Color.yellow)
-                    }
-                    NavigationLink(destination: HappyView()) {
-                        RedirectButtonView(name: "Entertainment", background: Color.orange)
-                    }
-                    NavigationLink(destination: HappyView()) {
-                        RedirectButtonView(name: "Health", background: Color.red)
-                    }
-                    NavigationLink(destination: HappyView()) {
-                        RedirectButtonView(name: "Notes", background: Color.purple)
-                    }
+                .padding(.trailing, -16)
                 }
                 .navigationBarHidden(true)
                 .navigationBarTitle("")
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
-                .padding(.trailing, -16)
+//                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
                 .padding(.trailing)
                 .padding(.leading)
             }
         }
-        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
         .edgesIgnoringSafeArea(.top)
         .lineSpacing(0)
         .onDisappear {
-            // To remove only extra separators below the list:
 //            UITableView.appearance().tableFooterView = UIView()
-            // To remove all separators including the actual ones:
             UITableView.appearance().separatorStyle = .singleLine
         }
         .onAppear {
@@ -75,7 +81,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(activeProfile: .constant(true))
+        HomeView(diaper: DiaperRecord(childData: ChildData()), activeProfile: .constant(true))
             .environmentObject(Child(childData: Children().current()))
 //        .environmentObject(childArray[0])
     }

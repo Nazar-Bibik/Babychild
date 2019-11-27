@@ -37,6 +37,7 @@ struct InitializeView: View {
                 CreateProfileView(children: self.children, new: self.$new).environmentObject(self.child)
             }
             .listStyle(GroupedListStyle())
+            .listRowInsets(EdgeInsets())
             Button(action: { self.new = true }) {
                 RedirectButtonView(name: "Make new profile", background: .gray)
             }

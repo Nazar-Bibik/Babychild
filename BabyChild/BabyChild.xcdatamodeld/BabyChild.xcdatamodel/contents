@@ -16,18 +16,28 @@
         <attribute name="sleeping" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="sleeptime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
-    <entity name="DiaperRecord" representedClassName="DiaperRecord" syncable="YES" codeGenerationType="class"/>
-    <entity name="FeedRecord" representedClassName="FeedRecord" syncable="YES" codeGenerationType="class"/>
-    <entity name="HealthRecord" representedClassName="HealthRecord" syncable="YES" codeGenerationType="class"/>
+    <entity name="DiaperEvent" representedClassName=".DiaperEvent" syncable="YES">
+        <attribute name="childid" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="note" optional="YES" attributeType="String"/>
+        <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="FeedEvent" representedClassName="FeedEvent" syncable="YES" codeGenerationType="class"/>
+    <entity name="HealthEvent" representedClassName="HealthEvent" syncable="YES" codeGenerationType="class"/>
     <entity name="Media" representedClassName="Media" syncable="YES" codeGenerationType="class"/>
-    <entity name="SleepRecord" representedClassName="SleepRecord" syncable="YES" codeGenerationType="class"/>
+    <entity name="SleepEvent" representedClassName=".SleepEvent" syncable="YES">
+        <attribute name="childid" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isnight" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="timestart" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="timestop" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
     <elements>
         <element name="ChildData" positionX="-133.8984375" positionY="-99.1875" width="129.40234375" height="163"/>
         <element name="ChildEvent" positionX="63.7265625" positionY="-131.859375" width="128" height="103"/>
-        <element name="SleepRecord" positionX="-6.27734375" positionY="398.84765625" width="128" height="43"/>
-        <element name="FeedRecord" positionX="-338.23828125" positionY="50.01953125" width="128" height="43"/>
-        <element name="DiaperRecord" positionX="229.609375" positionY="-19.93359375" width="128" height="43"/>
-        <element name="HealthRecord" positionX="197.546875" positionY="150.484375" width="128" height="43"/>
+        <element name="DiaperEvent" positionX="229.609375" positionY="-19.93359375" width="128" height="103"/>
+        <element name="FeedEvent" positionX="-338.23828125" positionY="50.01953125" width="128" height="43"/>
+        <element name="HealthEvent" positionX="197.546875" positionY="150.484375" width="128" height="43"/>
         <element name="Media" positionX="-184.25390625" positionY="195.73046875" width="128" height="43"/>
+        <element name="SleepEvent" positionX="-6.27734375" positionY="398.84765625" width="128" height="103"/>
     </elements>
 </model>

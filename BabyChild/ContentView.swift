@@ -18,7 +18,7 @@ struct ContentView: View {
         ZStack {
             if (children.current() != nil && activeProfile){
                 TabView() {
-                    HomeView(activeProfile: $activeProfile)
+                    HomeView(diaper: DiaperRecord(childData: child.childData), activeProfile: $activeProfile)
                         .tabItem {
                             Text("Home")
 
