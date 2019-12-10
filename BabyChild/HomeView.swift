@@ -42,7 +42,7 @@ struct HomeView: View {
                             RedirectButtonView(name: "Sleep", info: child.showSleepInfo(), background: Color.blue)
                         }
                         NavigationLink(destination: FeedView()) {
-                            RedirectButtonView(name: "Feed", info: child.showFeedInfo(), background: Color.green)
+                            RedirectButtonView(name: "Feed", info: "Last fed 4:48 h ago", background: Color.green)
                         }
                         NavigationLink(destination: DiaperView(diaper: diaper)) {
                             RedirectButtonView(name: "Diaper", background: Color.yellow)

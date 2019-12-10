@@ -16,7 +16,6 @@ struct HappyView: View {
             Spacer()
         }
         .frame(minWidth: 0, idealWidth: 1000, maxWidth: .infinity, minHeight: 0, idealHeight: 1000, maxHeight: .infinity, alignment: .center)
-    .background(Image("giphy"))
     }
 }
 

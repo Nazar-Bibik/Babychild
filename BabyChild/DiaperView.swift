@@ -14,37 +14,37 @@ struct DiaperView: View {
     
     var body: some View {
         
-        VStack{
+        VStack(spacing: 0){
             HStack{
                 VStack(spacing: 24){
                     Button(action: {self.diaper.newRecord(type: 0)}) {
-                        RedirectButtonView(name: "Pee")
+                        RedirectButtonView(name: "Liquid")
                     }
                     Button(action: {self.diaper.newRecord(type: 1)}) {
-                        RedirectButtonView(name: "Poo")
+                        RedirectButtonView(name: "Solid")
                     }
                 }
                 Button(action: {self.diaper.newRecord(type: 2)}) {
-                    RedirectButtonView(name: "PePo")
+                    RedirectButtonView(name: "Both")
                 }
-            }
-            Divider()
+            }.padding()
+            Divider().padding([.leading, .trailing])
             ScrollView {
 //                List(diaper.diaperEvents, id: \.childid) { item in
                 ForEach(self.diaper.diaperEvents, id: \.self) {item in
                     HStack{
+                        Spacer()
                         SlimButtonView(name: self.diaper.showTime(item: item))
                         .font(.system(size: 14, design: .monospaced))
                         Spacer()
                         Text(self.diaper.showType(item: item))
                             .font(.title)
                         Spacer()
-                    }
+                        }.padding([.top, .trailing, .leading])
                 }
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
             }
         }
-        .padding()
         .navigationBarTitle(Text("Diaper"), displayMode: .inline)
         
     }

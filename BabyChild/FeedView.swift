@@ -25,17 +25,17 @@ struct FeedView: View {
                 HStack{
                     Text("Breast")
                     Spacer()
-                    Text("110 ml time")
+                    Text("350 ml time")
                 }
                 HStack{
                     Text("Bottle")
                     Spacer()
-                    Text("110 ml time")
+                    Text("160 ml time")
                 }
                 HStack{
                     Text("Solid")
                     Spacer()
-                    Text("110 ml time")
+                    Text("0 ml time")
                 }
             }
 //            .padding()

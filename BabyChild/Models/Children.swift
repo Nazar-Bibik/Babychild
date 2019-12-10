@@ -70,9 +70,10 @@ class Children: ObservableObject {
     }
     
     func delete(index: Int) {
+        let cid = self.childrenData[index].id
         context.delete(self.childrenData[index])
         do {
-            try context.delete(context.fetch(ChildEvent.getAll()).first(where: { $0.childid == self.childrenData[index].id} )!)
+            try context.delete(context.fetch(ChildEvent.getAll()).first(where: { Int(truncating: $0.childid) == Int(truncating: cid)} )!)
         } catch {
             print("Error while deleting a childEvent, \(error)")
         }

@@ -11,6 +11,7 @@ import Foundation
 import UIKit
 
 struct WizardView: View {
+    @State var titleText: String = "Wizard"
     let context: [MenuItems]
     var body: some View {
         NavigationView{
@@ -25,7 +26,7 @@ struct WizardView: View {
                 }
             }
         }
-        .navigationBarTitle(Text("All in One"))
+        .navigationBarTitle(Text(titleText))
         }
     }
 }

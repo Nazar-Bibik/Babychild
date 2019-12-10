@@ -34,10 +34,10 @@ struct RedirectButtonView: View{
 struct RedirectButtonView_Previews: PreviewProvider {
     static var previews: some View {
         Group{
-            RedirectButtonView(name: "Child", info: "Yes")
+            RedirectButtonView(name: "Record", info: "Yes")
             RedirectButtonView(name: "Not Child", background: .red)
             RedirectButtonView(name: "Another test", info: "Bottom text", background: Color("cHeaderBlue"))
         }
-        .previewLayout(.fixed(width: 400, height: 120))
+        .previewLayout(.fixed(width: 250, height: 120))
     }
 }

@@ -20,15 +20,29 @@ struct ContentView: View {
                 TabView() {
                     HomeView(diaper: DiaperRecord(childData: child.childData), activeProfile: $activeProfile)
                         .tabItem {
+                            Image(systemName: "house")
                             Text("Home")
 
                     }.tag(1)
                     WizardView(context: wizardMenu)
                         .tabItem{
+                            Image(systemName: "wand.and.stars")
                             Text("Wizard")
                     }.tag(2)
+                    MemoriesView()
+                        .tabItem{
+                            Image(systemName: "camera")
+                            
+                            Text("Memories")
+                    }.tag(4)
+                    MotherView()
+                        .tabItem{
+                            Image(systemName: "m.square")
+                            Text("Mother")
+                    }.tag(5)
                     UserSettingsView()
                         .tabItem{
+                            Image(systemName: "gear")
                             Text("Settings")
                     }.tag(3)
                 }

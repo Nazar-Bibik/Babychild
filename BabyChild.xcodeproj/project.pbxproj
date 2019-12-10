@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		951894EC2369DCA700881270 /* SleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951894EB2369DCA700881270 /* SleepView.swift */; };
+		952E478A2397060800F83619 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952E47892397060800F83619 /* ImagePicker.swift */; };
 		953279BA238D7B8C00FA9280 /* UserSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953279B9238D7B8C00FA9280 /* UserSettingsView.swift */; };
 		953279BC238DA56200FA9280 /* SleepRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953279BB238DA56200FA9280 /* SleepRecord.swift */; };
 		953279BE238DAAFD00FA9280 /* SleepEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953279BD238DAAFD00FA9280 /* SleepEvent.swift */; };
@@ -20,6 +21,8 @@
 		9551C1C42371E9FD005C449B /* DiaperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551C1C32371E9FD005C449B /* DiaperView.swift */; };
 		9551C1CA23723CD3005C449B /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551C1C923723CD3005C449B /* DateHelper.swift */; };
 		9551C1CC23726832005C449B /* InitializeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551C1CB23726832005C449B /* InitializeView.swift */; };
+		95561D832397563300EBE469 /* MemoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95561D822397563300EBE469 /* MemoriesView.swift */; };
+		95561D852397611F00EBE469 /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95561D842397611F00EBE469 /* MotherView.swift */; };
 		9557AFDC2369288C002055F0 /* CellModelCapital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9557AFDB2369288B002055F0 /* CellModelCapital.swift */; };
 		9563E5A52369B8DF00D2BFC9 /* WizardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9563E5A42369B8DF00D2BFC9 /* WizardView.swift */; };
 		9563E5A72369B99E00D2BFC9 /* ListSegueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9563E5A62369B99E00D2BFC9 /* ListSegueView.swift */; };
@@ -69,6 +72,7 @@
 
 /* Begin PBXFileReference section */
 		951894EB2369DCA700881270 /* SleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepView.swift; sourceTree = "<group>"; };
+		952E47892397060800F83619 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		953279B9238D7B8C00FA9280 /* UserSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsView.swift; sourceTree = "<group>"; };
 		953279BB238DA56200FA9280 /* SleepRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepRecord.swift; sourceTree = "<group>"; };
 		953279BD238DAAFD00FA9280 /* SleepEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepEvent.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 		9551C1C32371E9FD005C449B /* DiaperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaperView.swift; sourceTree = "<group>"; };
 		9551C1C923723CD3005C449B /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		9551C1CB23726832005C449B /* InitializeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeView.swift; sourceTree = "<group>"; };
+		95561D822397563300EBE469 /* MemoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesView.swift; sourceTree = "<group>"; };
+		95561D842397611F00EBE469 /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
 		9557AFDB2369288B002055F0 /* CellModelCapital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModelCapital.swift; sourceTree = "<group>"; };
 		9563E5A42369B8DF00D2BFC9 /* WizardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WizardView.swift; sourceTree = "<group>"; };
 		9563E5A62369B99E00D2BFC9 /* ListSegueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSegueView.swift; sourceTree = "<group>"; };
@@ -180,6 +186,8 @@
 				95B4BA022364E59600D0B6D1 /* Models */,
 				95B3F4F4235DEAAA00DA429C /* AppDelegate.swift */,
 				95B3F4F6235DEAAA00DA429C /* SceneDelegate.swift */,
+				95561D822397563300EBE469 /* MemoriesView.swift */,
+				95561D842397611F00EBE469 /* MotherView.swift */,
 				951894EB2369DCA700881270 /* SleepView.swift */,
 				9551C1C12371D151005C449B /* FeedView.swift */,
 				9551C1C32371E9FD005C449B /* DiaperView.swift */,
@@ -263,6 +271,7 @@
 				95984EC423671A0F00AED0AE /* ChildTestLoad.swift */,
 				95C6BCD323774AF000EF7F90 /* DataHelper.swift */,
 				954D70A7238B630F00478AED /* ConversionHelper.swift */,
+				952E47892397060800F83619 /* ImagePicker.swift */,
 			);
 			path = HelperFunctions;
 			sourceTree = "<group>";
@@ -416,10 +425,12 @@
 				953279BA238D7B8C00FA9280 /* UserSettingsView.swift in Sources */,
 				95B4BA062365F7D100D0B6D1 /* Child.swift in Sources */,
 				9551C1CA23723CD3005C449B /* DateHelper.swift in Sources */,
+				95561D852397611F00EBE469 /* MotherView.swift in Sources */,
 				95AFC7E42369BB8F00B6C0D9 /* HappyView.swift in Sources */,
 				9563E5A72369B99E00D2BFC9 /* ListSegueView.swift in Sources */,
 				953EC677238A0F83002C46DD /* ChildEvent.swift in Sources */,
 				95B3F4FC235DEAAA00DA429C /* ContentView.swift in Sources */,
+				952E478A2397060800F83619 /* ImagePicker.swift in Sources */,
 				95F48E6823624DEA00FB2EB6 /* HomeView.swift in Sources */,
 				95756436236936390084253B /* MenuItems.swift in Sources */,
 				954D70A8238B630F00478AED /* ConversionHelper.swift in Sources */,
@@ -431,6 +442,7 @@
 				95B3F4F7235DEAAA00DA429C /* SceneDelegate.swift in Sources */,
 				951894EC2369DCA700881270 /* SleepView.swift in Sources */,
 				95B4BA042364E5C800D0B6D1 /* ChildData.swift in Sources */,
+				95561D832397563300EBE469 /* MemoriesView.swift in Sources */,
 				953279C2238DFFB700FA9280 /* DiaperRecord.swift in Sources */,
 				95C6BCD423774AF000EF7F90 /* DataHelper.swift in Sources */,
 				953279BE238DAAFD00FA9280 /* SleepEvent.swift in Sources */,

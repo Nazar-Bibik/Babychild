@@ -26,3 +26,10 @@ let wizardMenuSegue: [MenuItems] = [
     MenuItems(i: 3, n: "Treating baby in summer", p: 1),
     MenuItems(i: 4, n: "Here", p: 1),
 ]
+
+let wizardMother: [MenuItems] = [
+    MenuItems(i: 1, n: "Advices", p: 0),
+    MenuItems(i: 2, n: "Vaccinations", p: 2),
+    MenuItems(i: 3, n: "Appointments", p: 2),
+    MenuItems(i: 4, n: "Where to get help?", p: 1),
+]

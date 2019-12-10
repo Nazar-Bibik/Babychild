@@ -80,7 +80,7 @@ extension Child{
         if childEvent.sleeping.boolValue{
             return "Sleeping"
         }
-        return "Awake"
+        return " Awake "
     }
     
     func showSleepInfo() -> String{

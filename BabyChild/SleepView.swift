@@ -23,7 +23,7 @@ struct SleepView: View {
                 self.openSleepSheet.toggle()
                 }
             }) {
-                RedirectButtonView(name: child.showSleepButton(), info: self.child.showSleepTime())
+                RedirectButtonView(name: child.showSleepButton(), info: "06:23")
             }.actionSheet(isPresented: $openSleepSheet) {
                 ActionSheet(
                     title: Text("Save sleep time?"),

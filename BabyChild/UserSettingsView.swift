@@ -12,9 +12,21 @@ struct UserSettingsView: View {
     var colors = DataHelper.colors
     @State var color = DataHelper.getHeaderColor()
     
+    @State var ln: String = "English"
+    var languages = ["English", "Bangla"]
+    
     
     var body: some View {
         Form {
+            Section(header: Text("Language")){
+                Picker(selection: $ln, label: Text("Application Language")) {
+                    ForEach(0 ..< languages.count) { index in
+                        Text(self.languages[index])
+                            .tag(self.languages[index])
+                    }
+                }
+                .pickerStyle(SegmentedPickerStyle())
+            }
             Section(header: Text("Colours")){
                 VStack{
                     HStack{
@@ -32,6 +44,16 @@ struct UserSettingsView: View {
                         .frame(height: 7)
                     .foregroundColor(Color(color))
                 }
+            }
+            HStack{
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {Text("Change child profile")}
+            }
+            Section{
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {Text("About UHBaby")}
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {Text("Feedback")}
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {Text("Terms of use")}
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {Text("Privacy policy")}
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {Text("Rate")}.foregroundColor(.green)
             }
         }
     }
