@@ -49,4 +49,11 @@ class DateHelper {
 
         return "\(dateFormatter.string(from: datetime))"
     }
+    
+    static func showDate(datetime: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY MMM d. E"
+
+        return "\(dateFormatter.string(from: datetime))"
+    }
 }

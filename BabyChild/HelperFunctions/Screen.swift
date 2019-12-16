@@ -18,6 +18,9 @@ struct Screen {
     static var height: CGFloat {
         return UIScreen.main.bounds.height
     }
+    static var size: CGRect {
+        return UIScreen.main.bounds
+    }
     static var homeList: CGFloat {
         switch UIDevice.current.orientation{
         case .portrait, .portraitUpsideDown, .unknown:

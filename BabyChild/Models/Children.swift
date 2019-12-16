@@ -37,7 +37,7 @@ class Children: ObservableObject {
         }
     }
     
-    func add(name: String, surname: String, dob: Date, health: Bool = false, picture: String = "default", gender: Bool?, blood: String) -> Bool{
+    func add(name: String, surname: String, dob: Date, health: Bool = false, picture: UIImage?, gender: Bool?, blood: String) -> Bool{
         if (name != "" && surname != "" && dob < Date() && gender != nil)
         {
             let new = ChildData(context: context)
@@ -48,11 +48,15 @@ class Children: ObservableObject {
             } else {
                 new.id = NSNumber(value: childrenData.last!.id.intValue + 1)
             }
+            if picture != nil{
+                new.picture = TC.ImageToBinary(picture: picture!)
+            } else {
+                new.picture = TC.ImageToBinary(picture: UIImage(imageLiteralResourceName: "default"))
+            }
             new.name = name
             new.surname = surname
             new.dob = dob
             new.health = NSNumber(value: health)
-            new.picture = picture
             new.gender = NSNumber(value: gender!)
             new.blood = blood
             

@@ -24,7 +24,7 @@ let wizardMenuSegue: [MenuItems] = [
     MenuItems(i: 1, n: "Allergies", p: 2),
     MenuItems(i: 2, n: "Cold", p: 2),
     MenuItems(i: 3, n: "Treating baby in summer", p: 1),
-    MenuItems(i: 4, n: "Here", p: 1),
+    MenuItems(i: 4, n: "Rashes", p: 1),
 ]
 
 let wizardMother: [MenuItems] = [

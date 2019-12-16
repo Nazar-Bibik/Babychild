@@ -11,6 +11,7 @@ import SwiftUI
 struct UserSettingsView: View {
     var colors = DataHelper.colors
     @State var color = DataHelper.getHeaderColor()
+    @Binding var activeProfile: Bool
     
     @State var ln: String = "English"
     var languages = ["English", "Bangla"]
@@ -46,7 +47,11 @@ struct UserSettingsView: View {
                 }
             }
             HStack{
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {Text("Change child profile")}
+                Button(action: {
+                    withAnimation{
+                    self.activeProfile.toggle()
+                    }
+                }) {Text("Change child profile")}
             }
             Section{
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {Text("About UHBaby")}
@@ -61,6 +66,6 @@ struct UserSettingsView: View {
 
 struct UserSettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        UserSettingsView()
+        UserSettingsView(activeProfile: .constant(true))
     }
 }

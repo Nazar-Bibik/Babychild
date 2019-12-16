@@ -20,22 +20,23 @@ struct HomeView: View {
 
     
     var body: some View {
-        
+        ZStack{
+            Color(DataHelper.getHeaderColor())
+                .edgesIgnoringSafeArea(.all)
+                .onTapGesture {
+                        withAnimation{
+                        self.activeProfile.toggle()
+                        }
+                }
         VStack(spacing: 0) {
             HeaderView()
                 .environmentObject(child)
-                .onTapGesture {
-                    withAnimation{
-                    self.activeProfile.toggle()
-                    }
-            }
             NavigationView{
                 
                 List {
                     if (screenHome != 0){
                     Spacer()
                         .frame(height: screenHome)
-//                        .padding(0)
                     }
                     Group{
                         NavigationLink(destination: SleepView().environmentObject(child)) {
@@ -61,13 +62,11 @@ struct HomeView: View {
                 }
                 .navigationBarHidden(true)
                 .navigationBarTitle("")
-//                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
                 .padding(.trailing)
                 .padding(.leading)
             }
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
-        .edgesIgnoringSafeArea(.top)
         .lineSpacing(0)
         .onDisappear {
 //            UITableView.appearance().tableFooterView = UIView()
@@ -76,6 +75,19 @@ struct HomeView: View {
         .onAppear {
             UITableView.appearance().separatorStyle = .none
         }
+            VStack{
+                Rectangle()
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 40)
+                    .opacity(0.0001)
+                    .onTapGesture {
+                            withAnimation{
+                            self.activeProfile.toggle()
+                            }
+                    }
+                Spacer()
+            }
+        }
+        
         }
 }
 

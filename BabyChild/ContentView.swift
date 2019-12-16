@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject private var child: Child
     @ObservedObject var children = Children()
+    @ObservedObject var memories = Memories(childid: DataHelper.fetchChild()!)
     @State var activeProfile: Bool = true
     
     
@@ -22,17 +23,15 @@ struct ContentView: View {
                         .tabItem {
                             Image(systemName: "house")
                             Text("Home")
-
                     }.tag(1)
                     WizardView(context: wizardMenu)
                         .tabItem{
                             Image(systemName: "wand.and.stars")
                             Text("Wizard")
                     }.tag(2)
-                    MemoriesView()
+                    MemoriesView(memories: memories).environmentObject(memories)
                         .tabItem{
                             Image(systemName: "camera")
-                            
                             Text("Memories")
                     }.tag(4)
                     MotherView()
@@ -40,7 +39,7 @@ struct ContentView: View {
                             Image(systemName: "m.square")
                             Text("Mother")
                     }.tag(5)
-                    UserSettingsView()
+                    UserSettingsView(activeProfile: $activeProfile)
                         .tabItem{
                             Image(systemName: "gear")
                             Text("Settings")
@@ -48,7 +47,7 @@ struct ContentView: View {
                 }
                 .edgesIgnoringSafeArea(.top)
             } else {
-                InitializeView(children: children, activeProfile: $activeProfile, new: children.isempty())
+                InitializeView(children: children, memories: memories, activeProfile: $activeProfile, new: children.isempty())
             }
         }.transition(.opacity)
     }

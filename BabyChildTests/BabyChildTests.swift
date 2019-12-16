@@ -47,21 +47,21 @@ class BabyChildTests: XCTestCase {
     }
 
     func testChildAddCorrectData1(){
-        XCTAssertEqual(children.add(name: "K", surname: "J", dob: Date() - 7, health: true, picture: "default", gender: true, blood: ""), true)
+        XCTAssertEqual(children.add(name: "K", surname: "J", dob: Date() - 7, health: true, picture: nil, gender: true, blood: ""), true)
     }
     
     func testChildAddCorrectData2(){
-         XCTAssertEqual(children.add(name: "K", surname: "", dob: Date(), health: true, picture: "default", gender: nil, blood: ""), false)
+         XCTAssertEqual(children.add(name: "K", surname: "", dob: Date(), health: true, picture: nil, gender: nil, blood: ""), false)
     }
     
     func testPerformanceAddChild() {
         self.measure {
-            _ = children.add(name: "K", surname: "J", dob: Date() - 7, health: true, picture: "default", gender: true, blood: "")
+            _ = children.add(name: "K", surname: "J", dob: Date() - 7, health: true, picture: nil, gender: true, blood: "")
         }
     }
     
     func testPerformanceRemoveChild() {
-        _ = children.add(name: "K", surname: "J", dob: Date() - 7, health: true, picture: "default", gender: true, blood: "")
+        _ = children.add(name: "K", surname: "J", dob: Date() - 7, health: true, picture: nil, gender: true, blood: "")
         self.measure {
             if children.childrenData.count != 0{
                 children.delete(index: 0)

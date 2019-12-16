@@ -15,7 +15,7 @@ public class ChildData: NSManagedObject, Identifiable {
     @NSManaged public var surname: String
     @NSManaged public var dob: Date
     @NSManaged public var health: NSNumber
-    @NSManaged public var picture: String
+    @NSManaged public var picture: NSData
     @NSManaged public var gender: NSNumber
     @NSManaged public var blood: String
 }

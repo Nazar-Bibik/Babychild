@@ -69,7 +69,7 @@ extension Child{
     }
     
     func showPicture() -> Image{
-        return Image(childData.picture)
+        return Image(uiImage: UIImage(data: childData.picture as Data)!)
     }
     
     func showName() -> String{

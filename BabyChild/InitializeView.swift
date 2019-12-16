@@ -11,6 +11,7 @@ import SwiftUI
 struct InitializeView: View {
     @EnvironmentObject var child: Child
     @ObservedObject var children: Children
+    @ObservedObject var memories: Memories
     @Binding var activeProfile: Bool
     @State var new: Bool
     
@@ -25,6 +26,8 @@ struct InitializeView: View {
                             withAnimation{
                                 DataHelper.setChild(id: Int(truncating: single.id))
                                 self.child.recreate(childData: single)
+                                self.memories.fetchAlbums(childid: Int(truncating: single.id))
+                                self.memories.fetchNotes(childid: Int(truncating: single.id))
                                 self.activeProfile = true
                             }
                         }
@@ -48,6 +51,6 @@ struct InitializeView: View {
 
 struct InitializeView_Previews: PreviewProvider {
     static var previews: some View {
-        InitializeView(children: Children(), activeProfile: .constant(true), new: true)
+        InitializeView(children: Children(), memories: Memories(childid: 0), activeProfile: .constant(true), new: true)
     }
 }

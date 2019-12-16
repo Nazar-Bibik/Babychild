@@ -18,7 +18,7 @@ struct CreateProfileView: View {
     @State var surname: String = ""
     @State var dob: Date = Date() + 3600
     @State var health: Bool = true
-    @State var picture: String = "d4"
+    @State var picture: UIImage? = nil
     @State var gender: Bool? = nil
     @State var blood: String = ""
     var bloodtypes = ["AB", "AB+", "A", "A+", "B", "B+", "O", "O+"]
@@ -30,14 +30,14 @@ struct CreateProfileView: View {
                 .fontWeight(.semibold)
             TextField("Name", text: $name)
             TextField("Surname", text: $surname)
+            
             Button(action: {self.pictureSheet.toggle()}) {
                 Text("Add photo")
             }.sheet(isPresented: $pictureSheet,
             onDismiss: {
-               // do whatever you need here
-               // if ImagePicker.shared.image != nil {
-               //    shownNextScreen = true
-//                }
+                if ImagePicker.shared.image != nil {
+                    self.picture = ImagePicker.shared.image!
+                }
             }, content: {
                ImagePicker.shared.view
             })

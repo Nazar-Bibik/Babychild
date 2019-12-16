@@ -9,95 +9,80 @@
 import SwiftUI
 
 struct MemoriesView: View {
+    @State var newMemory: Bool = false
+    
+    @ObservedObject var memories: Memories
+    @EnvironmentObject var child: Child
+    
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false){
-            HStack{
-                Text("Most important memories")
-                    .font(.largeTitle)
-                    .fontWeight(.semibold)
-                Spacer()
-            }.padding(.bottom, 32)
-            VStack{
-                HStack{
-                    Text("Photos")
-                        .font(.title)
-                    Spacer()
+        NavigationView{
+            ZStack{
+                ScrollView(.vertical, showsIndicators: false){
+                    
+                    if memories.albums.count != 0 && memories.albums.first!.pictures?.allObjects.count != 0{
+                        ZStack{
+                            EffectView(customEffect: UIBlurEffect(style: .dark)).frame(height: 180)
+                                .background(DataHelper.getThumbnailsFromAlbum(album: memories.albums.first!)[0]
+                                .resizable()
+                                .scaledToFill())
+                                .clipped()
+                                .cornerRadius(12)
+//                            EffectText(labelText: memories.albums.first!.title!)
+                            Text(memories.albums.first!.title!).foregroundColor(.white).opacity(0.75)
+                        }
+                    }
+                    
+                    if memories.notes.count != 0 {
+                        NavigationLink(destination: MemoNotesView(notes: memories.notes)) {
+                        VStack{
+                            Text(child.showName() + "'s " + memories.notes.first!.name!)
+                                .font(.headline)
+                            Text(DateHelper.showDate(datetime: memories.notes.first!.time!))
+                                .fontWeight(.light)
+                            }.frame(minWidth: 0, maxWidth: .infinity).padding().background(Color(DataHelper.getHeaderColor())).cornerRadius(12).shadow(color: .secondary, radius: 1, x: 0, y: 1)
+                        }.foregroundColor(Color(UIColor.label))
+                    }
+                    
+                    Divider().hidden()
+                    Button(action: {
+                        withAnimation{
+                            self.newMemory.toggle()
+                        }
+                        
+                    }){
+                        SlimButtonView(name: "Make a new memory")
+                    }
+                    
+                    ForEach(memories.albums, id: \.self) { album in
+                        NavigationLink(destination: PicturesView(memories: self.memories, album: album)){
+                            CellAlbumView(album: album, images: DataHelper.getThumbnailsFromAlbum(album: album))
+                        }
+                    }
+                }.padding([.leading, .trailing])
+                
+                if newMemory{
+                    EffectView(customEffect: UIBlurEffect(style: .dark))
+                        .transition(.opacity)
+                        .onTapGesture {
+                            self.newMemory.toggle()
+                    }
+                    NewMemoryView(memories: memories, newMemory: $newMemory)
+                        .transition(.slide)
+                        .gesture(DragGesture().onEnded { value in
+                            self.newMemory.toggle()
+                        })
+
                 }
-                ZStack{
-                    HStack{
-                        Spacer()
-                        Image("d5").frame(width: Screen.width/2, height: 120).clipped().cornerRadius(12).shadow(color: .secondary, radius: 2, x: 2, y: 0)
-                    }
-                    HStack{
-                        Spacer()
-                        Image("test").frame(width: Screen.width/2, height: 120).clipped().cornerRadius(12).shadow(color: .secondary, radius: 2, x: 2, y: 0)
-                        Spacer()
-                    }
-                    HStack{
-                        Image("d1").frame(width: Screen.width/2, height: 120).clipped().cornerRadius(12).shadow(color: .secondary, radius: 2, x: 2, y: 0)
-                        Spacer()
-                    }
-                }.frame(height: 120)
-            }.padding().cornerRadius(12)
+                
+            }
+            .navigationBarTitle("Memories", displayMode: .inline)
             
-            VStack{
-                Text("Jame's first word - mama")
-                    .font(.headline)
-                Text("Nov 23, 2019, 15:23")
-                    .fontWeight(.light)
-                }.frame(minWidth: 0, maxWidth: .infinity).padding().background(Color(DataHelper.getHeaderColor())).cornerRadius(12).shadow(color: .secondary, radius: 1, x: 0, y: 1)
-            
-            VStack{
-                HStack{
-                    Text("Sleepin")
-                        .font(.title)
-                    Spacer()
-                }
-                ZStack{
-                    HStack{
-                        Spacer()
-                        Image("s1").scaledToFit().frame(width: Screen.width/2, height: 120).clipped().cornerRadius(12).shadow(color: .secondary, radius: 2, x: 2, y: 0)
-                    }
-                    HStack{
-                        Spacer()
-                        Image("s2").scaledToFit().frame(width: Screen.width/2, height: 120).clipped().cornerRadius(12).shadow(color: .secondary, radius: 2, x: 2, y: 0)
-                        Spacer()
-                    }
-                    HStack{
-                        Image("s3").scaledToFit().frame(width: Screen.width/2, height: 120).clipped().cornerRadius(12).shadow(color: .secondary, radius: 2, x: 2, y: 0)
-                        Spacer()
-                    }
-                }.frame(height: 120)
-            }.padding().cornerRadius(12)
-            
-            VStack{
-                HStack{
-                    Text("Happy photos")
-                        .font(.title)
-                    Spacer()
-                }
-                ZStack{
-                    HStack{
-                        Spacer()
-                        Image("r1").scaledToFit().frame(width: Screen.width/2, height: 120).clipped().cornerRadius(12).shadow(color: .secondary, radius: 2, x: 2, y: 0)
-                    }
-                    HStack{
-                        Spacer()
-                        Image("r2").scaledToFit().frame(width: Screen.width/2, height: 120).clipped().cornerRadius(12).shadow(color: .secondary, radius: 2, x: 2, y: 0)
-                        Spacer()
-                    }
-                    HStack{
-                        Image("r3").scaledToFit().frame(width: Screen.width/2, height: 120).clipped().cornerRadius(12).shadow(color: .secondary, radius: 2, x: 2, y: 0)
-                        Spacer()
-                    }
-                }.frame(height: 120)
-            }.padding().cornerRadius(12)
-        }.padding([.leading, .trailing])
+        }
     }
 }
 
 struct MemoriesView_Previews: PreviewProvider {
     static var previews: some View {
-        MemoriesView()
+        MemoriesView(memories: Memories(childid: 0))
     }
 }

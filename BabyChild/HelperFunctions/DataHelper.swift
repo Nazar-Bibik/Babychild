@@ -37,6 +37,18 @@ class DataHelper {
         UserDefaults.standard.set(name, forKey: "cHeader")
     }
     
+    static func getThumbnailsFromAlbum(album: Album) -> [Image]{
+        let objects = album.pictures!.allObjects as! [Media]
+        if objects.count == 0{
+            return []
+        }
+        var clipped: [Image] = []
+        for i in 0 ..< (objects.count <= 3 ? objects.count : 3) {
+            clipped.append( TC.DataToImage(data: objects[i].thumbnail!) )
+        }
+        return clipped
+    }
+    
 //    static func getChild() -> [Child]{
 //        let childData: [ChildData] = load("testDataChild.json")
 //        let childArray = childData.map{ Child(childData: $0) }

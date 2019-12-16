@@ -14,7 +14,7 @@ struct CellChild: View {
     
     var body: some View {
         HStack {
-            Image(child.picture)
+            Image(uiImage: UIImage(data: child.picture as Data)!)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: Screen.width/3, height: Screen.width/3)

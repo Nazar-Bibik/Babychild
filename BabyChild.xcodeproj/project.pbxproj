@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		783A3ACD23A59A58007A2496 /* Memories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A3ACC23A59A58007A2496 /* Memories.swift */; };
+		783EB30A23A6BFE400F8CBA6 /* CellAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783EB30923A6BFE400F8CBA6 /* CellAlbumView.swift */; };
+		78924FA923A7259F000CA544 /* NewMemoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78924FA823A7259F000CA544 /* NewMemoryView.swift */; };
+		78924FAB23A72CB5000CA544 /* RandomTitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78924FAA23A72CB5000CA544 /* RandomTitles.swift */; };
+		78924FAD23A74ED0000CA544 /* PicturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78924FAC23A74ED0000CA544 /* PicturesView.swift */; };
+		78924FAF23A759D1000CA544 /* MemoNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78924FAE23A759D1000CA544 /* MemoNotesView.swift */; };
 		951894EC2369DCA700881270 /* SleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951894EB2369DCA700881270 /* SleepView.swift */; };
 		952E478A2397060800F83619 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952E47892397060800F83619 /* ImagePicker.swift */; };
 		953279BA238D7B8C00FA9280 /* UserSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953279B9238D7B8C00FA9280 /* UserSettingsView.swift */; };
@@ -71,6 +77,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		783A3ACC23A59A58007A2496 /* Memories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memories.swift; sourceTree = "<group>"; };
+		783EB30923A6BFE400F8CBA6 /* CellAlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellAlbumView.swift; sourceTree = "<group>"; };
+		78924FA823A7259F000CA544 /* NewMemoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMemoryView.swift; sourceTree = "<group>"; };
+		78924FAA23A72CB5000CA544 /* RandomTitles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomTitles.swift; sourceTree = "<group>"; };
+		78924FAC23A74ED0000CA544 /* PicturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesView.swift; sourceTree = "<group>"; };
+		78924FAE23A759D1000CA544 /* MemoNotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoNotesView.swift; sourceTree = "<group>"; };
 		951894EB2369DCA700881270 /* SleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepView.swift; sourceTree = "<group>"; };
 		952E47892397060800F83619 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		953279B9238D7B8C00FA9280 /* UserSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsView.swift; sourceTree = "<group>"; };
@@ -153,6 +165,7 @@
 			children = (
 				95984EC723671C4C00AED0AE /* testDataChild.json */,
 				95756431236930180084253B /* testDataWizardCells.swift */,
+				78924FAA23A72CB5000CA544 /* RandomTitles.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -187,6 +200,9 @@
 				95B3F4F4235DEAAA00DA429C /* AppDelegate.swift */,
 				95B3F4F6235DEAAA00DA429C /* SceneDelegate.swift */,
 				95561D822397563300EBE469 /* MemoriesView.swift */,
+				78924FAE23A759D1000CA544 /* MemoNotesView.swift */,
+				78924FAC23A74ED0000CA544 /* PicturesView.swift */,
+				78924FA823A7259F000CA544 /* NewMemoryView.swift */,
 				95561D842397611F00EBE469 /* MotherView.swift */,
 				951894EB2369DCA700881270 /* SleepView.swift */,
 				9551C1C12371D151005C449B /* FeedView.swift */,
@@ -245,6 +261,7 @@
 				953279BD238DAAFD00FA9280 /* SleepEvent.swift */,
 				953279BF238DFAC300FA9280 /* DiaperEvent.swift */,
 				953279C1238DFFB700FA9280 /* DiaperRecord.swift */,
+				783A3ACC23A59A58007A2496 /* Memories.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -259,6 +276,7 @@
 				95994B64236E21D600B68151 /* RedirectButtonView.swift */,
 				95D2AECC238CB3840013844E /* SlimButtonView.swift */,
 				953EC678238A2CBC002C46DD /* CellChild.swift */,
+				783EB30923A6BFE400F8CBA6 /* CellAlbumView.swift */,
 			);
 			path = HelpViewes;
 			sourceTree = "<group>";
@@ -424,6 +442,8 @@
 				95D2AECD238CB3840013844E /* SlimButtonView.swift in Sources */,
 				953279BA238D7B8C00FA9280 /* UserSettingsView.swift in Sources */,
 				95B4BA062365F7D100D0B6D1 /* Child.swift in Sources */,
+				78924FAF23A759D1000CA544 /* MemoNotesView.swift in Sources */,
+				78924FAD23A74ED0000CA544 /* PicturesView.swift in Sources */,
 				9551C1CA23723CD3005C449B /* DateHelper.swift in Sources */,
 				95561D852397611F00EBE469 /* MotherView.swift in Sources */,
 				95AFC7E42369BB8F00B6C0D9 /* HappyView.swift in Sources */,
@@ -434,18 +454,22 @@
 				95F48E6823624DEA00FB2EB6 /* HomeView.swift in Sources */,
 				95756436236936390084253B /* MenuItems.swift in Sources */,
 				954D70A8238B630F00478AED /* ConversionHelper.swift in Sources */,
+				783EB30A23A6BFE400F8CBA6 /* CellAlbumView.swift in Sources */,
 				95756432236930180084253B /* testDataWizardCells.swift in Sources */,
 				95AB04AC238A02F400B3F540 /* Children.swift in Sources */,
 				95984ECA2367225100AED0AE /* Screen.swift in Sources */,
 				95984EC523671A0F00AED0AE /* ChildTestLoad.swift in Sources */,
 				9563E5A52369B8DF00D2BFC9 /* WizardView.swift in Sources */,
 				95B3F4F7235DEAAA00DA429C /* SceneDelegate.swift in Sources */,
+				78924FA923A7259F000CA544 /* NewMemoryView.swift in Sources */,
 				951894EC2369DCA700881270 /* SleepView.swift in Sources */,
+				783A3ACD23A59A58007A2496 /* Memories.swift in Sources */,
 				95B4BA042364E5C800D0B6D1 /* ChildData.swift in Sources */,
 				95561D832397563300EBE469 /* MemoriesView.swift in Sources */,
 				953279C2238DFFB700FA9280 /* DiaperRecord.swift in Sources */,
 				95C6BCD423774AF000EF7F90 /* DataHelper.swift in Sources */,
 				953279BE238DAAFD00FA9280 /* SleepEvent.swift in Sources */,
+				78924FAB23A72CB5000CA544 /* RandomTitles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,8 +643,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = uk.MowDev.ChildBaby;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = uk.MowDev.BabyChild;
+				PRODUCT_NAME = BabyChild;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -639,8 +663,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = uk.MowDev.ChildBaby;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = uk.MowDev.BabyChild;
+				PRODUCT_NAME = BabyChild;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

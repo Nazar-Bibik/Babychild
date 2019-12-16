@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15508" systemVersion="19B88" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Album" representedClassName=".Album" syncable="YES" codeGenerationType="class">
+        <attribute name="childid" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="pictures" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Media" inverseName="albums" inverseEntity="Media"/>
+    </entity>
     <entity name="ChildData" representedClassName=".ChildData" syncable="YES">
         <attribute name="blood" optional="YES" attributeType="String"/>
         <attribute name="dob" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -7,7 +13,7 @@
         <attribute name="health" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="picture" optional="YES" attributeType="String"/>
+        <attribute name="picture" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
         <attribute name="surname" optional="YES" attributeType="String"/>
     </entity>
     <entity name="ChildEvent" representedClassName=".ChildEvent" syncable="YES">
@@ -24,7 +30,19 @@
     </entity>
     <entity name="FeedEvent" representedClassName="FeedEvent" syncable="YES" codeGenerationType="class"/>
     <entity name="HealthEvent" representedClassName="HealthEvent" syncable="YES" codeGenerationType="class"/>
-    <entity name="Media" representedClassName="Media" syncable="YES" codeGenerationType="class"/>
+    <entity name="Media" representedClassName=".Media" syncable="YES" codeGenerationType="class">
+        <attribute name="caption" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="Binary"/>
+        <attribute name="thumbnail" optional="YES" attributeType="Binary"/>
+        <relationship name="albums" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Album" inverseName="pictures" inverseEntity="Album"/>
+    </entity>
+    <entity name="Note" representedClassName=".Note" syncable="YES" codeGenerationType="class">
+        <attribute name="childid" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="timenote" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="SleepEvent" representedClassName=".SleepEvent" syncable="YES">
         <attribute name="childid" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="isnight" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
@@ -32,12 +50,14 @@
         <attribute name="timestop" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <elements>
+        <element name="Album" positionX="-54" positionY="162" width="128" height="103"/>
         <element name="ChildData" positionX="-133.8984375" positionY="-99.1875" width="129.40234375" height="163"/>
         <element name="ChildEvent" positionX="63.7265625" positionY="-131.859375" width="128" height="103"/>
         <element name="DiaperEvent" positionX="229.609375" positionY="-19.93359375" width="128" height="103"/>
         <element name="FeedEvent" positionX="-338.23828125" positionY="50.01953125" width="128" height="43"/>
         <element name="HealthEvent" positionX="197.546875" positionY="150.484375" width="128" height="43"/>
-        <element name="Media" positionX="-184.25390625" positionY="195.73046875" width="128" height="43"/>
+        <element name="Media" positionX="-293.30078125" positionY="251.1015625" width="128" height="103"/>
+        <element name="Note" positionX="-312.1875" positionY="115.734375" width="128" height="118"/>
         <element name="SleepEvent" positionX="-6.27734375" positionY="398.84765625" width="128" height="103"/>
     </elements>
 </model>
