@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+// Creating and managing profiles of children
 struct InitializeView: View {
     @EnvironmentObject var child: Child
     @ObservedObject var children: Children

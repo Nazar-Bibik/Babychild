@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+// MAIN SCREEN
 struct ContentView: View {
     @EnvironmentObject private var child: Child
     @ObservedObject var children = Children()
