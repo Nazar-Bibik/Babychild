@@ -11,6 +11,7 @@ import CoreData
 import SwiftUI
 
 
+// Helper class to control diaper records and display them
 class DiaperRecord: ObservableObject {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     

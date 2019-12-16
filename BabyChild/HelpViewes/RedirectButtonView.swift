@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+// Styled button with text and colour
 struct RedirectButtonView: View{
     var name: String
     var info: String = ""

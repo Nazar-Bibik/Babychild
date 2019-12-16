@@ -10,6 +10,7 @@ import SwiftUI
 import Foundation
 import UIKit
 
+//WIzard tab, redirects to ListSegueView
 struct WizardView: View {
     @State var titleText: String = "Wizard"
     let context: [MenuItems]

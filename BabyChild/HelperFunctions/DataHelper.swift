@@ -10,6 +10,7 @@ import Foundation
 //import UIKit
 import SwiftUI
 
+// Get user settings: Curent child, Colour, Get Thumbnail
 class DataHelper {
     static let childKey = "currentChild"
     static let colors = ["cHeaderBlue", "cHeaderRed", "cHeaderGreen"]
@@ -37,6 +38,7 @@ class DataHelper {
         UserDefaults.standard.set(name, forKey: "cHeader")
     }
     
+    //
     static func getThumbnailsFromAlbum(album: Album) -> [Image]{
         let objects = album.pictures!.allObjects as! [Media]
         if objects.count == 0{

@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+// List of note memos
 struct MemoNotesView: View {
     @State var notes: [Note]
     @EnvironmentObject var child: Child

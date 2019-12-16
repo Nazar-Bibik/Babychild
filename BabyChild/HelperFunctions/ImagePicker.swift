@@ -10,6 +10,7 @@ import Foundation
 import SwiftUI
 import Combine
 
+// UIKit injection of image pickers for photo galery
 final class ImagePicker : ObservableObject {
     static let shared : ImagePicker = ImagePicker()
     private init() {}  //force using the singleton: ImagePicker.shared
@@ -24,6 +25,7 @@ final class ImagePicker : ObservableObject {
     }
 }
 
+// Image picking
 extension ImagePicker {
     class Coordinator: NSObject,
         UINavigationControllerDelegate,
@@ -40,6 +42,7 @@ extension ImagePicker {
     }
 }
 
+// Scene control
 extension ImagePicker {
     struct View: UIViewControllerRepresentable {
         func makeCoordinator() -> Coordinator {

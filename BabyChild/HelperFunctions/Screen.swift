@@ -11,6 +11,7 @@ import UIKit
 
 //let screen = Screen()
 
+// Getting screen dimensions
 struct Screen {
     static var width: CGFloat {
         return UIScreen.main.bounds.width
@@ -21,6 +22,7 @@ struct Screen {
     static var size: CGRect {
         return UIScreen.main.bounds
     }
+    // Spacer for list in home
     static var homeList: CGFloat {
         switch UIDevice.current.orientation{
         case .portrait, .portraitUpsideDown, .unknown:

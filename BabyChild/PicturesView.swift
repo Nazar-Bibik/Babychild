@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+// View pictures in an album
 struct PicturesView: View {
     @ObservedObject var memories: Memories
     @State var album: Album
@@ -20,6 +21,7 @@ struct PicturesView: View {
     
     var body: some View {
         ZStack{
+            // Display pictures
             ScrollView(.vertical){
                 ForEach(album.pictures!.allObjects.map { ($0 as! Media) }, id: \.self){ media in
                     ZStack{
@@ -39,6 +41,7 @@ struct PicturesView: View {
                     }
                 }
             }
+            // Buttons
             VStack{
                 Spacer()
                 HStack{
@@ -70,6 +73,7 @@ struct PicturesView: View {
                 }.padding()
             }
             
+            // Deprecated
             if newPicture{
                 EffectView(customEffect: UIBlurEffect(style: .regular))
                     .transition(.opacity)

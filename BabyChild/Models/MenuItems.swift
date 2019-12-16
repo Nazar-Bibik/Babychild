@@ -9,7 +9,7 @@
 import Foundation
 import SwiftUI
 
-
+// Used in ListSegueView
 struct MenuItems: Equatable, Hashable, Codable{
     var id: Int
     var Name: String

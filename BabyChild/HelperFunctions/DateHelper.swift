@@ -43,6 +43,7 @@ class DateHelper {
         return hourz + String(hour) + ":" + minutez + String(minute)
     }
     
+    // return string of time
     static func showTime(datetime: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
@@ -50,6 +51,7 @@ class DateHelper {
         return "\(dateFormatter.string(from: datetime))"
     }
     
+    // return string of date
     static func showDate(datetime: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY MMM d. E"

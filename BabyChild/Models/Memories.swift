@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 import CoreData
 
-
+// Custom class to control memories
 class Memories: ObservableObject{
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -44,6 +44,7 @@ class Memories: ObservableObject{
         }
     }
     
+    // Update CoreData
     func saveContext() {
         if context.hasChanges{
             do {
@@ -54,6 +55,8 @@ class Memories: ObservableObject{
         }
     }
     
+    
+    // Automatically adds note memo, album or both, depending on user input
     func addMemory(title: String, time: Date, picture: UIImage?, notename: String, notetime: Date, timenote: String) -> Bool{
         let album = addAlbum(title: title, time: time)
         if album != nil && picture != nil {
@@ -80,6 +83,7 @@ class Memories: ObservableObject{
         return true
     }
     
+    // Add picture and include in an album
     func addPicture(picture: UIImage?, album: Album) -> Media?{
         if picture == nil{
             return nil

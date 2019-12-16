@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+// Form to fill and create a child profile
 struct CreateProfileView: View {
     @EnvironmentObject var child: Child
     @ObservedObject var children: Children

@@ -11,6 +11,7 @@ import SwiftUI
 import CoreData
 
 
+// Controll all childrem profiles
 class Children: ObservableObject {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -26,6 +27,7 @@ class Children: ObservableObject {
         }
     }
     
+    // Update CoreData
     func saveContext() {
         if context.hasChanges{
             do {
@@ -37,6 +39,7 @@ class Children: ObservableObject {
         }
     }
     
+    // Add new child
     func add(name: String, surname: String, dob: Date, health: Bool = false, picture: UIImage?, gender: Bool?, blood: String) -> Bool{
         if (name != "" && surname != "" && dob < Date() && gender != nil)
         {
@@ -89,6 +92,7 @@ class Children: ObservableObject {
 //        saveContext()
 //    }
     
+    // Fetch current child
     func current() -> ChildData?{
         let current = DataHelper.fetchChild()
         if current == nil {return nil}

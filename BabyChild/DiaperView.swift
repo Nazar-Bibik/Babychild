@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+// View to display and create diaper records
 struct DiaperView: View {
     @ObservedObject var diaper: DiaperRecord
     

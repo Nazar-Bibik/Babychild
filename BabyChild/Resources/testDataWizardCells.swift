@@ -10,6 +10,8 @@ import Foundation
 import SwiftUI
 
 
+// Data for wizard cells
+
 let wizardMenu: [MenuItems] = [
     MenuItems(i: 1, n: "Emergency and remedies", p: 2),
     MenuItems(i: 2, n: "Baby handle videos", p: 2),

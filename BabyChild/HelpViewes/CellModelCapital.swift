@@ -9,6 +9,7 @@
 import Foundation
 import SwiftUI
 
+// List cell with capital coloured letter
 struct CellModelCapital: View {
     let name: String
     var priority: Color = .gray

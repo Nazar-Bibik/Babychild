@@ -10,12 +10,14 @@ import SwiftUI
 import Foundation
 
 
+// Manage sleep and dispaly data
 struct SleepView: View {
     @State var openSleepSheet: Bool = false
     @EnvironmentObject var child: Child
     
     var body: some View {
         VStack{
+            // MARK: Sleep buttons
             Button(action: {
                 if !self.child.isSleeping(){
                     self.child.sleep()
@@ -31,9 +33,10 @@ struct SleepView: View {
                         .default(Text("Wake up"), action:{self.child.sleep()}),
                         .destructive(Text("Cancel"))
                     ]
-
                 )
             }
+            
+            // MARK: Sleep data
             Divider()
             HStack{
                 Text("Slept during day")

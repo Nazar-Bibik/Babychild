@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+// Header with child image, name and age
 struct HeaderView: View {
     @EnvironmentObject var child: Child
     var body: some View{

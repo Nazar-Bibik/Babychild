@@ -10,6 +10,7 @@ import Foundation
 import SwiftUI
 
 
+// One Child profile handler
 class Child: ObservableObject{
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -20,6 +21,7 @@ class Child: ObservableObject{
         recreate(childData: childData)
     }
     
+    // Use a new child
     func recreate(childData: ChildData?){
         if (childData != nil){
             self.childData = childData!
@@ -32,6 +34,7 @@ class Child: ObservableObject{
         }
     }
     
+    // Updates CoreData
     func saveContext() {
         if context.hasChanges{
             do {

@@ -10,11 +10,13 @@ import Foundation
 import SwiftUI
 
 
+// Type converter
 class TC{
     static func BooToStr(boo: Bool?) -> String{
         return (boo?.description ?? "nil")
     }
     
+    // CoreData data to image and vv
     static func ImageToBinary(picture: UIImage, quality: CGFloat = 1) -> NSData{
         return picture.jpegData(compressionQuality: quality)! as NSData
     }

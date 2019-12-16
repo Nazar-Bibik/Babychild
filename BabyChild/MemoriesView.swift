@@ -19,6 +19,7 @@ struct MemoriesView: View {
             ZStack{
                 ScrollView(.vertical, showsIndicators: false){
                     
+                    // Display recent album on top
                     if memories.albums.count != 0 && memories.albums.first!.pictures?.allObjects.count != 0{
                         ZStack{
                             EffectView(customEffect: UIBlurEffect(style: .dark)).frame(height: 180)
@@ -32,6 +33,7 @@ struct MemoriesView: View {
                         }
                     }
                     
+                    // Display recent note memos -> segue to MemoNotesView
                     if memories.notes.count != 0 {
                         NavigationLink(destination: MemoNotesView(notes: memories.notes)) {
                         VStack{
@@ -48,11 +50,11 @@ struct MemoriesView: View {
                         withAnimation{
                             self.newMemory.toggle()
                         }
-                        
                     }){
                         SlimButtonView(name: "Make a new memory")
                     }
                     
+                    // Display albums -> Segue to PicturesView
                     ForEach(memories.albums, id: \.self) { album in
                         NavigationLink(destination: PicturesView(memories: self.memories, album: album)){
                             CellAlbumView(album: album, images: DataHelper.getThumbnailsFromAlbum(album: album))
@@ -60,6 +62,8 @@ struct MemoriesView: View {
                     }
                 }.padding([.leading, .trailing])
                 
+                // MARK: Creating new memory
+                // Memory creator, combines visual effect and NewMemoryView
                 if newMemory{
                     EffectView(customEffect: UIBlurEffect(style: .dark))
                         .transition(.opacity)

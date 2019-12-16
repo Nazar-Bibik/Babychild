@@ -9,7 +9,7 @@
 import SwiftUI
 
 
-
+// Home view
 struct HomeView: View {
     @EnvironmentObject var child: Child
     @ObservedObject var diaper: DiaperRecord
@@ -17,10 +17,10 @@ struct HomeView: View {
     @State var screenHome = Screen.homeList
     
 //    @State var sleepButton: String
-
     
     var body: some View {
         ZStack{
+            // Background color
             Color(DataHelper.getHeaderColor())
                 .edgesIgnoringSafeArea(.all)
                 .onTapGesture {
@@ -28,11 +28,12 @@ struct HomeView: View {
                         self.activeProfile.toggle()
                         }
                 }
+            // Header
         VStack(spacing: 0) {
             HeaderView()
                 .environmentObject(child)
             NavigationView{
-                
+                // MARK: List of redirect buttons
                 List {
                     if (screenHome != 0){
                     Spacer()
@@ -70,11 +71,13 @@ struct HomeView: View {
         .lineSpacing(0)
         .onDisappear {
 //            UITableView.appearance().tableFooterView = UIView()
+            // Styling table
             UITableView.appearance().separatorStyle = .singleLine
         }
         .onAppear {
             UITableView.appearance().separatorStyle = .none
         }
+            // MARK: redirect rectangle to change curent child
             VStack{
                 Rectangle()
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 40)

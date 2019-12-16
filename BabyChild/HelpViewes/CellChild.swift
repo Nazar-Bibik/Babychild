@@ -9,6 +9,7 @@
 import SwiftUI
 import Foundation
 
+// Show child profile
 struct CellChild: View {
     var child: ChildData
     

@@ -8,7 +8,7 @@
 
 import Foundation
 
-
+// Used in memories notes
 let memoryTitle: String = [
     "First step", "First word", "First snow", "First birthday", "First drawing"
 ].randomElement()!

@@ -37,7 +37,6 @@
 		95984EC523671A0F00AED0AE /* ChildTestLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95984EC423671A0F00AED0AE /* ChildTestLoad.swift */; };
 		95984EC823671C4C00AED0AE /* testDataChild.json in Resources */ = {isa = PBXBuildFile; fileRef = 95984EC723671C4C00AED0AE /* testDataChild.json */; };
 		95984ECA2367225100AED0AE /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95984EC92367225100AED0AE /* Screen.swift */; };
-		95994B5F236E0E6800B68151 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95994B5E236E0E6800B68151 /* SwiftUIView.swift */; };
 		95994B61236E214000B68151 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95994B60236E214000B68151 /* HeaderView.swift */; };
 		95994B65236E21D600B68151 /* RedirectButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95994B64236E21D600B68151 /* RedirectButtonView.swift */; };
 		95AB04AC238A02F400B3F540 /* Children.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB04AB238A02F400B3F540 /* Children.swift */; };
@@ -107,7 +106,6 @@
 		95984EC423671A0F00AED0AE /* ChildTestLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildTestLoad.swift; sourceTree = "<group>"; };
 		95984EC723671C4C00AED0AE /* testDataChild.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testDataChild.json; sourceTree = "<group>"; };
 		95984EC92367225100AED0AE /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
-		95994B5E236E0E6800B68151 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		95994B60236E214000B68151 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		95994B64236E21D600B68151 /* RedirectButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedirectButtonView.swift; sourceTree = "<group>"; };
 		95AB04AB238A02F400B3F540 /* Children.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Children.swift; sourceTree = "<group>"; };
@@ -271,7 +269,6 @@
 			children = (
 				9557AFDB2369288B002055F0 /* CellModelCapital.swift */,
 				95AFC7E32369BB8F00B6C0D9 /* HappyView.swift */,
-				95994B5E236E0E6800B68151 /* SwiftUIView.swift */,
 				95994B60236E214000B68151 /* HeaderView.swift */,
 				95994B64236E21D600B68151 /* RedirectButtonView.swift */,
 				95D2AECC238CB3840013844E /* SlimButtonView.swift */,
@@ -435,7 +432,6 @@
 				95994B61236E214000B68151 /* HeaderView.swift in Sources */,
 				9557AFDC2369288C002055F0 /* CellModelCapital.swift in Sources */,
 				95994B65236E21D600B68151 /* RedirectButtonView.swift in Sources */,
-				95994B5F236E0E6800B68151 /* SwiftUIView.swift in Sources */,
 				953EC679238A2CBC002C46DD /* CellChild.swift in Sources */,
 				95B3F4F5235DEAAA00DA429C /* AppDelegate.swift in Sources */,
 				95EFFB15238B3B2E00781F37 /* CreateProfileView.swift in Sources */,

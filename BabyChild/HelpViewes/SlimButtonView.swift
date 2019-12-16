@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+// Redirect Button but slim
 struct SlimButtonView: View {
     @State var name: String
     var background: Color = .gray

@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+// Album cell for photos
 struct CellAlbumView: View {
     @State var album: Album
     var images: [Image]
@@ -24,6 +25,7 @@ struct CellAlbumView: View {
                     Spacer()
                 }
             }
+            //
             ZStack{
                 if images.count == 0{
                     Image("default2").renderingMode(.original).resizable().scaledToFill().frame(height: 120).clipped().cornerRadius(12)
@@ -68,6 +70,7 @@ struct CellAlbumView: View {
                     }.padding([.leading, .trailing])
                 }
                 }.frame(height: 120).cornerRadius(12).clipped()
+            //
         }.padding().cornerRadius(12)
     }
 }

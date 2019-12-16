@@ -8,9 +8,11 @@
 
 import SwiftUI
 
+// Manage feed and display data
 struct FeedView: View {
     var body: some View {
         VStack(spacing: 12){
+            // MARK: Feed buttons
             HStack(spacing: 12){
                 RedirectButtonView(name: "L")
                 Text("Breast")
@@ -21,6 +23,8 @@ struct FeedView: View {
             RedirectButtonView(name: "Bottle")
             RedirectButtonView(name: "Solid")
             Divider()
+            
+            // MARK: Feed Data
             Group{
                 HStack{
                     Text("Breast")

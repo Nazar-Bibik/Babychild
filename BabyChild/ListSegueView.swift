@@ -9,6 +9,7 @@
 import SwiftUI
 import Foundation
 
+// List segues view, comes from Wizard tab
 struct ListSegueView: View {
     let tab: MenuItems
     let context: [MenuItems]

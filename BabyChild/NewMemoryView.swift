@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+// View to create a new memory
 struct NewMemoryView: View {
     @State var title: String = ""
     @State var time: Date = Date()
@@ -20,6 +21,7 @@ struct NewMemoryView: View {
     
     var body: some View {
         VStack{
+            // Group to assign parameters for all elemetns inside
             Group{
                 VStack(spacing: 0){
                     TextField("Album title", text: $title).padding([.trailing, .leading]).padding([.top, .bottom], 6)
@@ -53,6 +55,7 @@ struct NewMemoryView: View {
 //                    }
             }.background(Color.white).cornerRadius(8)
             
+            // MARK: Add memory button
             Divider().hidden()
             Button(action: {
                 if self.memories.addMemory(title: self.title, time: self.time, picture: self.picture, notename: self.title, notetime: self.time, timenote: self.timenote){

@@ -9,6 +9,7 @@
 import CoreData
 import Foundation
 
+// Custom DataCore 
 public class ChildData: NSManagedObject, Identifiable {
     @NSManaged public var id: NSNumber
     @NSManaged public var name: String
