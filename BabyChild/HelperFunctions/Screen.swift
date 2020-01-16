@@ -2,14 +2,12 @@
 //  Screen.swift
 //  BabyChild
 //
-//  Created by Mow on 28/10/2019.
-//  Copyright © 2019 Mow. All rights reserved.
+//  Created by Mowsumi Rahman on 28/10/2019.
+//  Copyright © 2019 Mowsumi Rahman. All rights reserved.
 //
 
 import Foundation
 import UIKit
-
-//let screen = Screen()
 
 // Getting screen dimensions
 struct Screen {

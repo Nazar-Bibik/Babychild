@@ -2,8 +2,8 @@
 //  RedirectButtonView.swift
 //  BabyChild
 //
-//  Created by Mow on 02/11/2019.
-//  Copyright © 2019 Mow. All rights reserved.
+//  Created by Mowsumi Rahman on 02/11/2019.
+//  Copyright © 2019 Mowsumi Rahman. All rights reserved.
 //
 
 import SwiftUI
@@ -21,14 +21,14 @@ struct RedirectButtonView: View{
                 .colorInvert()
             if (info != ""){
                 Text(info)
-                .colorInvert()
+                    .colorInvert()
             }
         }
         .frame(minWidth: 0, maxWidth: .infinity)
-            .padding(9)
-            .background(background)
-            .clipShape(Capsule())
-            .foregroundColor(Color(.label))
+        .padding(9)
+        .background(background)
+        .clipShape(Capsule())
+        .foregroundColor(Color(.label))
     }
 }
 

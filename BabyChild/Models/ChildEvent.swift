@@ -2,8 +2,8 @@
 //  ChildEvent.swift
 //  BabyChild
 //
-//  Created by Mow on 24/11/2019.
-//  Copyright © 2019 Mow. All rights reserved.
+//  Created by Mowsumi Rahman on 24/11/2019.
+//  Copyright © 2019 Mowsumi Rahman. All rights reserved.
 //
 
 import Foundation
@@ -20,7 +20,7 @@ extension ChildEvent {
     static func getAll() -> NSFetchRequest<ChildEvent> {
         let request: NSFetchRequest<ChildEvent> = ChildEvent.fetchRequest() as! NSFetchRequest<ChildEvent>
         request.sortDescriptors = [NSSortDescriptor(key: "childid", ascending: true)]
-
+        
         return request
     }
 }

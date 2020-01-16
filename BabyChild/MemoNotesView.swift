@@ -2,8 +2,8 @@
 //  MemoNotesView.swift
 //  BabyChild
 //
-//  Created by Nazar on 16/12/2019.
-//  Copyright © 2019 Mow. All rights reserved.
+//  Created by Mowsumi Rahman on 16/12/2019.
+//  Copyright © 2019 Mowsumi Rahman. All rights reserved.
 //
 
 import SwiftUI
@@ -27,8 +27,3 @@ struct MemoNotesView: View {
     }
 }
 
-//struct MemoNotesView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MemoNotesView()
-//    }
-//}

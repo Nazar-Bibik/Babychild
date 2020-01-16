@@ -2,12 +2,13 @@
 //  DateHelper.swift
 //  BabyChild
 //
-//  Created by Mow on 06/11/2019.
-//  Copyright © 2019 Mow. All rights reserved.
+//  Created by Mowsumi Rahman on 06/11/2019.
+//  Copyright © 2019 Mowsumi Rahman. All rights reserved.
 //
 
 import Foundation
 import SwiftUI
+
 
 class DateHelper {
     static func current() -> Date {

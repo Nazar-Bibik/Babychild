@@ -2,8 +2,8 @@
 //  Memories.swift
 //  BabyChild
 //
-//  Created by Nazar on 14/12/2019.
-//  Copyright © 2019 Mow. All rights reserved.
+//  Created by Mowsumi Rahman on 14/12/2019.
+//  Copyright © 2019 Mowsumi Rahman. All rights reserved.
 //
 
 import Foundation
@@ -38,7 +38,7 @@ class Memories: ObservableObject{
         request.sortDescriptors = [NSSortDescriptor(key: "time", ascending: false)]
         request.predicate = NSCompoundPredicate(type: .and, subpredicates: [NSPredicate(format: "type = %@", "memory"), NSPredicate(format: "childid = %@", NSNumber(value: childid))])
         do {
-        notes = try context.fetch(request)
+            notes = try context.fetch(request)
         } catch {
             print("Error fetching memories, \(error)")
         }
@@ -68,7 +68,7 @@ class Memories: ObservableObject{
             if album == nil && note == nil{
                 return false
             } else if note != nil{
-                    fetchNotes(childid: DataHelper.fetchChild()!)
+                fetchNotes(childid: DataHelper.fetchChild()!)
                 if album == nil{
                     return true
                 }
@@ -105,14 +105,14 @@ class Memories: ObservableObject{
         if name == "" && timenote == ""{
             return nil
         }
-    
+        
         let new = Note(context: context)
         new.name = name
         new.time = time
         new.timenote = timenote
         new.type = "memory"
         new.childid = Int32(DataHelper.fetchChild()!)
-
+        
         saveContext()
         return new
     }

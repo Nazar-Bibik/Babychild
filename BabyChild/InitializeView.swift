@@ -2,8 +2,8 @@
 //  InitializeView.swift
 //  BabyChild
 //
-//  Created by Mow on 06/11/2019.
-//  Copyright © 2019 Mow. All rights reserved.
+//  Created by Mowsumi Rahman on 06/11/2019.
+//  Copyright © 2019 Mowsumi Rahman. All rights reserved.
 //
 
 import SwiftUI
@@ -45,7 +45,7 @@ struct InitializeView: View {
             Button(action: { self.new = true }) {
                 RedirectButtonView(name: "Make new profile", background: .gray)
             }
-        .padding()
+            .padding()
         }
     }
 }

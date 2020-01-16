@@ -2,8 +2,8 @@
 //  CellAlbumView.swift
 //  BabyChild
 //
-//  Created by Nazar on 15/12/2019.
-//  Copyright © 2019 Mow. All rights reserved.
+//  Created by Mowsumi Rahman on 15/12/2019.
+//  Copyright © 2019 Mowsumi Rahman. All rights reserved.
 //
 
 import SwiftUI
@@ -58,7 +58,7 @@ struct CellAlbumView: View {
                 VStack{
                     Spacer()
                     EffectView()
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 20)
+                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 20)
                 }
                 VStack{
                     Spacer()
@@ -69,7 +69,7 @@ struct CellAlbumView: View {
                         Spacer()
                     }.padding([.leading, .trailing])
                 }
-                }.frame(height: 120).cornerRadius(12).clipped()
+            }.frame(height: 120).cornerRadius(12).clipped()
             //
         }.padding().cornerRadius(12)
     }
@@ -84,7 +84,7 @@ struct CellAlbumView_Previews: PreviewProvider {
 struct EffectView: UIViewRepresentable {
     let blurEffect: UIBlurEffect = UIBlurEffect(style: .regular)
     var customEffect: UIBlurEffect?
-
+    
     func makeUIView(context: UIViewRepresentableContext<Self>) -> UIVisualEffectView {
         UIVisualEffectView()
     }
@@ -97,32 +97,3 @@ struct EffectView: UIViewRepresentable {
         }
     }
 }
-
-//struct EffectText: UIViewRepresentable {
-//        var customEffect: UIBlurEffect?
-//        var labelText: String?
-//
-//        func makeUIView(context: UIViewRepresentableContext<Self>) -> UIVisualEffectView {
-//            UIVisualEffectView()
-//        }
-//        
-//        func updateUIView(_ uiView: UIVisualEffectView, context: UIViewRepresentableContext<Self>) {
-//            if customEffect != nil{
-//                uiView.effect = UIVibrancyEffect(blurEffect: customEffect!)
-//            } else {
-//                uiView.effect = UIVibrancyEffect(blurEffect: UIBlurEffect(style: .regular))
-//            }
-//
-//            uiView.translatesAutoresizingMaskIntoConstraints = false
-//            let label: UILabel = UILabel()
-//            label.translatesAutoresizingMaskIntoConstraints = false
-//            label.text = labelText == nil ? "Empty" : labelText!
-//            label.font = UIFont(name: "HelveticaNeue-Bold", size: 30)
-//            label.textAlignment = .center
-//            label.textColor = UIColor.white
-//            uiView.contentView.addSubview(label)
-//            
-//            uiView.addConstraint(NSLayoutConstraint(item: label, attribute: .centerX, relatedBy: .equal, toItem: uiView, attribute: .centerX, multiplier: 1.0, constant: 0))
-//            uiView.addConstraint(NSLayoutConstraint(item: label, attribute: .centerY, relatedBy: .equal, toItem: uiView, attribute: .centerY, multiplier: 1.0, constant: 0))
-//        }
-//}

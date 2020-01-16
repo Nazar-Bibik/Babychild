@@ -2,8 +2,8 @@
 //  Children.swift
 //  BabyChild
 //
-//  Created by Mow on 24/11/2019.
-//  Copyright © 2019 Mow. All rights reserved.
+//  Created by Mowsumi Rahman on 24/11/2019.
+//  Copyright © 2019 Mowsumi Rahman. All rights reserved.
 //
 
 import Foundation
@@ -86,11 +86,6 @@ class Children: ObservableObject {
         }
         saveContext()
     }
-    
-//    func update(index: Int){
-//        self.childrenData[index].state = self.creatures[index].state?.isEqual(to: 0) as NSNumber?
-//        saveContext()
-//    }
     
     // Fetch current child
     func current() -> ChildData?{

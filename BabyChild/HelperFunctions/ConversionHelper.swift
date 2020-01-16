@@ -2,13 +2,12 @@
 //  ConversionHelper.swift
 //  BabyChild
 //
-//  Created by Mow on 25/11/2019.
-//  Copyright © 2019 Mow. All rights reserved.
+//  Created by Mowsumi Rahman on 25/11/2019.
+//  Copyright © 2019 Mowsumi Rahman. All rights reserved.
 //
 
 import Foundation
 import SwiftUI
-
 
 // Type converter
 class TC{

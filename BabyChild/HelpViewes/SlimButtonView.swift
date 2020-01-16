@@ -2,8 +2,8 @@
 //  SlimButtonView.swift
 //  BabyChild
 //
-//  Created by Mow on 26/11/2019.
-//  Copyright © 2019 Mow. All rights reserved.
+//  Created by Mowsumi Rahman on 26/11/2019.
+//  Copyright © 2019 Mowsumi Rahman. All rights reserved.
 //
 
 import SwiftUI
@@ -19,13 +19,12 @@ struct SlimButtonView: View {
                 .font(.title)
                 .colorInvert()
         }
-//        .frame(minWidth: 0, maxWidth: .infinity)
-            .padding(3)
-            .padding(.leading, 24)
-            .padding(.trailing, 24)
-            .background(background)
-            .clipShape(Capsule())
-            .foregroundColor(Color(.label))
+        .padding(3)
+        .padding(.leading, 24)
+        .padding(.trailing, 24)
+        .background(background)
+        .clipShape(Capsule())
+        .foregroundColor(Color(.label))
     }
 }
 

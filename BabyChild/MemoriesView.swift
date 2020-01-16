@@ -2,8 +2,8 @@
 //  MemoriesView.swift
 //  BabyChild
 //
-//  Created by Mow on 04/12/2019.
-//  Copyright © 2019 Mow. All rights reserved.
+//  Created by Mowsumi Rahman on 04/12/2019.
+//  Copyright © 2019 Mowsumi Rahman. All rights reserved.
 //
 
 import SwiftUI
@@ -21,26 +21,32 @@ struct MemoriesView: View {
                     
                     // Display recent album on top
                     if memories.albums.count != 0 && memories.albums.first!.pictures?.allObjects.count != 0{
-                        ZStack{
-                            EffectView(customEffect: UIBlurEffect(style: .dark)).frame(height: 180)
-                                .background(DataHelper.getThumbnailsFromAlbum(album: memories.albums.first!)[0]
-                                .resizable()
-                                .scaledToFill())
-                                .clipped()
-                                .cornerRadius(12)
-//                            EffectText(labelText: memories.albums.first!.title!)
-                            Text(memories.albums.first!.title!).foregroundColor(.white).opacity(0.75)
+                        NavigationLink(destination: PicturesView(memories: self.memories, album: memories.albums.first!)){
+                            ZStack{
+                                EffectView(customEffect: UIBlurEffect(style: .dark)).frame(height: 180)
+                                    .background(DataHelper.getThumbnailsFromAlbum(album: memories.albums.first!)[0]
+                                        .renderingMode(.original)
+                                        .resizable()
+                                        .scaledToFill())
+                                    .clipped()
+                                    .cornerRadius(12)
+                                Text(memories.albums.first!.title!)
+                                    .font(.largeTitle)
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(.white)
+                                    .opacity(0.75)
+                            }
                         }
                     }
                     
                     // Display recent note memos -> segue to MemoNotesView
                     if memories.notes.count != 0 {
                         NavigationLink(destination: MemoNotesView(notes: memories.notes)) {
-                        VStack{
-                            Text(child.showName() + "'s " + memories.notes.first!.name!)
-                                .font(.headline)
-                            Text(DateHelper.showDate(datetime: memories.notes.first!.time!))
-                                .fontWeight(.light)
+                            VStack{
+                                Text(child.showName() + "'s " + memories.notes.first!.name!)
+                                    .font(.headline)
+                                Text(DateHelper.showDate(datetime: memories.notes.first!.time!))
+                                    .fontWeight(.light)
                             }.frame(minWidth: 0, maxWidth: .infinity).padding().background(Color(DataHelper.getHeaderColor())).cornerRadius(12).shadow(color: .secondary, radius: 1, x: 0, y: 1)
                         }.foregroundColor(Color(UIColor.label))
                     }
@@ -75,7 +81,7 @@ struct MemoriesView: View {
                         .gesture(DragGesture().onEnded { value in
                             self.newMemory.toggle()
                         })
-
+                    
                 }
                 
             }

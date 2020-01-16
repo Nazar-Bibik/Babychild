@@ -2,8 +2,8 @@
 //  SleepView.swift
 //  BabyChild
 //
-//  Created by Mow on 30/10/2019.
-//  Copyright © 2019 Mow. All rights reserved.
+//  Created by Mowsumi Rahman on 30/10/2019.
+//  Copyright © 2019 Mowsumi Rahman. All rights reserved.
 //
 
 import SwiftUI
@@ -22,10 +22,10 @@ struct SleepView: View {
                 if !self.child.isSleeping(){
                     self.child.sleep()
                 } else {
-                self.openSleepSheet.toggle()
+                    self.openSleepSheet.toggle()
                 }
             }) {
-                RedirectButtonView(name: child.showSleepButton(), info: "06:23")
+                RedirectButtonView(name: child.showSleepButton(), info: child.showSleepInfo())
             }.actionSheet(isPresented: $openSleepSheet) {
                 ActionSheet(
                     title: Text("Save sleep time?"),
@@ -51,14 +51,8 @@ struct SleepView: View {
             }
             .padding()
         }
-         .navigationBarTitle(Text("Sleep"), displayMode: .inline)
+        .navigationBarTitle(Text("Sleep"), displayMode: .inline)
         .frame(minWidth: 0,  maxWidth: Screen.width/1.5, minHeight: 0,  maxHeight: .infinity)
         
     }
 }
-
-//struct SleepView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SleepView()
-//    }
-//}

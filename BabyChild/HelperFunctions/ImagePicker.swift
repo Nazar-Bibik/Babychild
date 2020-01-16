@@ -2,8 +2,8 @@
 //  ImagePicker.swift
 //  BabyChild
 //
-//  Created by Mow on 03/12/2019.
-//  Copyright © 2019 Mow. All rights reserved.
+//  Created by Mowsumi Rahman on 03/12/2019.
+//  Copyright © 2019 Mowsumi Rahman. All rights reserved.
 //
 
 import Foundation
@@ -13,10 +13,10 @@ import Combine
 // UIKit injection of image pickers for photo galery
 final class ImagePicker : ObservableObject {
     static let shared : ImagePicker = ImagePicker()
-    private init() {}  //force using the singleton: ImagePicker.shared
+    private init() {}
     let view = ImagePicker.View()
     let coordinator = ImagePicker.Coordinator()
-    // Bindable Object part
+    
     let willChange = PassthroughSubject<UIImage?, Never>()
     @Published var image: UIImage? = nil {
         didSet {

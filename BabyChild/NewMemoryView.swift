@@ -2,8 +2,8 @@
 //  NewMemoryView.swift
 //  BabyChild
 //
-//  Created by Nazar on 16/12/2019.
-//  Copyright © 2019 Mow. All rights reserved.
+//  Created by Mowsumi Rahman on 16/12/2019.
+//  Copyright © 2019 Mowsumi Rahman. All rights reserved.
 //
 
 import SwiftUI
@@ -42,17 +42,13 @@ struct NewMemoryView: View {
                         Text("Change an image").padding().background(Image(uiImage: picture!).renderingMode(.original).resizable().scaledToFill()).cornerRadius(8)
                     }
                 }.sheet(isPresented: $pictureSheet,
-                onDismiss: {
-                    if ImagePicker.shared.image != nil {
-                        self.picture = ImagePicker.shared.image!
-                    }
+                        onDismiss: {
+                            if ImagePicker.shared.image != nil {
+                                self.picture = ImagePicker.shared.image!
+                            }
                 }, content: {
-                   ImagePicker.shared.view
+                    ImagePicker.shared.view
                 })
-                
-//                    if picture != nil{
-//                        Image(uiImage: picture!).resizable().scaledToFill().frame(height: 60).clipped()
-//                    }
             }.background(Color.white).cornerRadius(8)
             
             // MARK: Add memory button
@@ -62,14 +58,8 @@ struct NewMemoryView: View {
                     self.newMemory.toggle()
                 }
             }){
-                SlimButtonView(name: "Save the memory", background: .green)
+                SlimButtonView(name: "Save memory", background: .green)
             }.background(Color.clear)
         }.padding()
     }
 }
-
-//struct NewMemoryView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        NewMemoryView(memories: Memories(childid: 0))
-//    }
-//}

@@ -2,8 +2,8 @@
 //  FeedView.swift
 //  BabyChild
 //
-//  Created by Mow on 05/11/2019.
-//  Copyright © 2019 Mow. All rights reserved.
+//  Created by Mowsumi Rahman on 05/11/2019.
+//  Copyright © 2019 Mowsumi Rahman. All rights reserved.
 //
 
 import SwiftUI
@@ -42,7 +42,6 @@ struct FeedView: View {
                     Text("0 ml time")
                 }
             }
-//            .padding()
             .padding(.leading)
             .padding(.trailing)
             .padding(.top)

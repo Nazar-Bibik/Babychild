@@ -2,8 +2,8 @@
 //  ContentView.swift
 //  BabyChild
 //
-//  Created by Mow on 21/10/2019.
-//  Copyright © 2019 Mow. All rights reserved.
+//  Created by Mowsumi Rahman on 21/10/2019.
+//  Copyright © 2019 Mowsumi Rahman. All rights reserved.
 //
 
 import SwiftUI

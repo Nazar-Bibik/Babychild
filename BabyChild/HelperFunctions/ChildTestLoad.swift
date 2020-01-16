@@ -2,16 +2,12 @@
 //  ChildTestLoad.swift
 //  BabyChild
 //
-//  Created by Mow on 28/10/2019.
-//  Copyright © 2019 Mow. All rights reserved.
+//  Created by Mowsumi Rahman on 28/10/2019.
+//  Copyright © 2019 Mowsumi Rahman. All rights reserved.
 //
 
 import Foundation
 import SwiftUI
-
-//let childData: [ChildData] = load("testDataChild.json")
-//let childArray = childData.map{ Child(childData: $0) }
-
 
 // Obsolete test data handler
 func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T {

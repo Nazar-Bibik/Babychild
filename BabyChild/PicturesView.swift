@@ -2,8 +2,8 @@
 //  PicturesView.swift
 //  BabyChild
 //
-//  Created by Nazar on 16/12/2019.
-//  Copyright © 2019 Mow. All rights reserved.
+//  Created by Mowsumi Rahman on 16/12/2019.
+//  Copyright © 2019 Mowsumi Rahman. All rights reserved.
 //
 
 import SwiftUI
@@ -30,12 +30,11 @@ struct PicturesView: View {
                             VStack{
                                 Spacer()
                                 EffectView()
-                                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 40)
+                                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 40)
                             }
                             VStack{
                                 Spacer()
                                 Text(media.caption!).foregroundColor(.white)
-//                                EffectText(labelText: media.caption!)
                             }
                         }
                     }
@@ -49,12 +48,12 @@ struct PicturesView: View {
                         Text("Add picture")
                     }
                     .sheet(isPresented: $pictureSheet,
-                    onDismiss: {
-                        if ImagePicker.shared.image != nil {
-                            _ = self.memories.addPicture(picture: ImagePicker.shared.image!, album: self.album)
-                        }
+                           onDismiss: {
+                            if ImagePicker.shared.image != nil {
+                                _ = self.memories.addPicture(picture: ImagePicker.shared.image!, album: self.album)
+                            }
                     }, content: {
-                       ImagePicker.shared.view
+                        ImagePicker.shared.view
                     })
                     
                     Spacer()
@@ -86,12 +85,12 @@ struct PicturesView: View {
                         Text("Select image")
                     }
                     .sheet(isPresented: $pictureSheet,
-                    onDismiss: {
-                        if ImagePicker.shared.image != nil {
-                            self.picture = ImagePicker.shared.image!
-                        }
+                           onDismiss: {
+                            if ImagePicker.shared.image != nil {
+                                self.picture = ImagePicker.shared.image!
+                            }
                     }, content: {
-                       ImagePicker.shared.view
+                        ImagePicker.shared.view
                     })
                     Button(action: {}){
                         Text("Save image")
@@ -111,8 +110,3 @@ struct PicturesView: View {
     }
 }
 
-//struct PicturesView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PicturesView()
-//    }
-//}

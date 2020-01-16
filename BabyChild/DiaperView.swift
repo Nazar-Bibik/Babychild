@@ -2,8 +2,8 @@
 //  DiaperView.swift
 //  BabyChild
 //
-//  Created by Mow on 05/11/2019.
-//  Copyright © 2019 Mow. All rights reserved.
+//  Created by Mowsumi Rahman on 05/11/2019.
+//  Copyright © 2019 Mowsumi Rahman. All rights reserved.
 //
 
 import SwiftUI
@@ -31,17 +31,16 @@ struct DiaperView: View {
             }.padding()
             Divider().padding([.leading, .trailing])
             ScrollView {
-//                List(diaper.diaperEvents, id: \.childid) { item in
                 ForEach(self.diaper.diaperEvents, id: \.self) {item in
                     HStack{
                         Spacer()
                         SlimButtonView(name: self.diaper.showTime(item: item))
-                        .font(.system(size: 14, design: .monospaced))
+                            .font(.system(size: 14, design: .monospaced))
                         Spacer()
                         Text(self.diaper.showType(item: item))
                             .font(.title)
                         Spacer()
-                        }.padding([.top, .trailing, .leading])
+                    }.padding([.top, .trailing, .leading])
                 }
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
             }

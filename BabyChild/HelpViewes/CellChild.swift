@@ -2,8 +2,8 @@
 //  CellChild.swift
 //  BabyChild
 //
-//  Created by Mow on 24/11/2019.
-//  Copyright © 2019 Mow. All rights reserved.
+//  Created by Mowsumi Rahman on 24/11/2019.
+//  Copyright © 2019 Mowsumi Rahman. All rights reserved.
 //
 
 import SwiftUI
@@ -29,28 +29,8 @@ struct CellChild: View {
                 .lineLimit(1)
             Spacer()
         }
-    .padding()
-    .background(child.gender.boolValue ? Color("boy") : Color("girl"))
-    .clipShape(Capsule())
+        .padding()
+        .background(child.gender.boolValue ? Color("boy") : Color("girl"))
+        .clipShape(Capsule())
     }
 }
-
-//struct CellChild_Previews: PreviewProvider {
-//    var child: ChildData = ChildData()
-//    init() {
-//        let c = ChildData()
-//        c.id = 0
-//        c.name = "Name"
-//        c.surname = "Surname"
-//        c.dob = Date()
-//        c.health = false
-//        c.picture = "default"
-//        c.gender = true
-//        c.blood = "AB+"
-//        self.child = c
-//    }
-//    static var previews: some View {
-//        CellChild(child: child)
-//    }
-//}
-

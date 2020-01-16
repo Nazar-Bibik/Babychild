@@ -2,8 +2,8 @@
 //  HeaderView.swift
 //  BabyChild
 //
-//  Created by Mow on 02/11/2019.
-//  Copyright © 2019 Mow. All rights reserved.
+//  Created by Mowsumi Rahman on 02/11/2019.
+//  Copyright © 2019 Mowsumi Rahman. All rights reserved.
 //
 
 import SwiftUI
@@ -15,26 +15,26 @@ struct HeaderView: View {
         
         HStack {
             child.showPicture()
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 60, height: 60)
-                    .clipped()
-                    .clipShape(Circle())
-                    .shadow(color: .secondary, radius: 6)
+                .resizable()
+                .scaledToFill()
+                .frame(width: 60, height: 60)
+                .clipped()
+                .clipShape(Circle())
+                .shadow(color: .secondary, radius: 6)
             Text(child.showName())
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .lineLimit(1)
-                    .aspectRatio(contentMode: .fit)
+                .font(.title)
+                .fontWeight(.bold)
+                .lineLimit(1)
+                .aspectRatio(contentMode: .fit)
             Spacer()
-                VStack {
-                    Group{
-                        Text(child.showAgeWeeks() + " weeks")
-                        Text(child.showAgeDays() + " days")
-                    }
-                    .font(.footnote)
+            VStack {
+                Group{
+                    Text(child.showAgeWeeks() + " weeks")
+                    Text(child.showAgeDays() + " days")
                 }
+                .font(.footnote)
             }
+        }
         .padding()
         .background(Color(DataHelper.getHeaderColor()))
         
@@ -44,7 +44,7 @@ struct HeaderView: View {
 struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
         HeaderView()
-//        .environmentObject(childArray[0])
+        //        .environmentObject(childArray[0])
     }
 }
 ////
